@@ -22,16 +22,18 @@ echo '<br>';
 
 if ($pirmas> $antras) {
     if ($antras != 0){
-        echo $pirmas/$antras;
+        echo round($pirmas/$antras,2);
     }else{
         echo 'dalyba is 0 negalima';
     }
 } else {
     if ($pirmas != 0) {
-        echo $antras/$pirmas;
+        echo round($antras/$pirmas,2);
     } else {
         echo 'dalyba is 0 negalima';
     }
 }
+
+
 
 
