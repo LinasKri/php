@@ -150,3 +150,28 @@ function kiekSkaitmenu($a, $b, $c, $d){
     echo '0 = ', $nulis, '; 1 = ', $vienas, '; 2 = ', $du;
 }
 kiekSkaitmenu($k1,$k2,$k3,$k4);
+echo '<br> ========== <br>';
+
+// 6 
+
+$busimasH = rand(1,6);
+echo '<h', $busimasH, '>', $busimasH, '</h', $busimasH,'>', '<br>';
+
+// 7
+
+$sk1 = rand(-10,10);
+$sk2 = rand(-10,10);
+$sk3 = rand(-10,10);
+
+echo "<font color='green'>",$sk1,"</font><br>";
+echo "<font color='green'>",$sk2,"</font><br>";
+echo "<font color='green'>",$sk3,"</font><br>";
+
+echo "<font color='red'>",$sk1,"</font><br>";
+echo "<font color='red'>",$sk2,"</font><br>";
+echo "<font color='red'>",$sk3,"</font><br>";
+
+echo "<font color='blue'>",$sk1,"</font><br>";
+echo "<font color='blue'>",$sk2,"</font><br>";
+echo "<font color='blue'>",$sk3,"</font><br>";
+
