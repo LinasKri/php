@@ -162,16 +162,36 @@ echo '<h', $busimasH, '>', $busimasH, '</h', $busimasH,'>', '<br>';
 $sk1 = rand(-10,10);
 $sk2 = rand(-10,10);
 $sk3 = rand(-10,10);
+                                    // reikia fix
+function coloredValues($a,$b,$c){
+    if ($a<0) {
+        echo "<font color='green'>",$sk1,"</font><br>";
+    }
+    if ($a===0) {
+        echo "<font color='red'>",$sk1,"</font><br>";
+    }
+    if ($a>0) {
+        echo "<font color='blue'>",$sk1,"</font><br>";
+    }
+    if ($b<0) {
+        echo "<font color='green'>",$sk1,"</font><br>";
+    }
+    if ($b===0) {
+        echo "<font color='red'>",$sk1,"</font><br>";
+    }
+    if ($b>0) {
+        echo "<font color='blue'>",$sk1,"</font><br>";
+    }
+    if ($c<0) {
+        echo "<font color='green'>",$sk1,"</font><br>";
+    }
+    if ($c===0) {
+        echo "<font color='red'>",$sk1,"</font><br>";
+    }
+    if ($c>0) {
+        echo "<font color='blue'>",$sk1,"</font><br>";
+    }
+}
 
-echo "<font color='green'>",$sk1,"</font><br>";
-echo "<font color='green'>",$sk2,"</font><br>";
-echo "<font color='green'>",$sk3,"</font><br>";
-
-echo "<font color='red'>",$sk1,"</font><br>";
-echo "<font color='red'>",$sk2,"</font><br>";
-echo "<font color='red'>",$sk3,"</font><br>";
-
-echo "<font color='blue'>",$sk1,"</font><br>";
-echo "<font color='blue'>",$sk2,"</font><br>";
-echo "<font color='blue'>",$sk3,"</font><br>";
+coloredValues($ka1,$sk2,$sk3);
 
