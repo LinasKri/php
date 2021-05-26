@@ -6,18 +6,16 @@ $gimMetai = 1991;
 $esamiMetai = 2021;
 
 
-echo 'As esu ', $vardas, ' ', $pavarde,' . Man yra ', $esamiMetai - $gimMetai, ' metu.';
-echo '<br>';
+echo 'As esu ', $vardas, ' ', $pavarde,' . Man yra ', $esamiMetai - $gimMetai, ' metu. <br>';
+
 
 // 2 
 
 // $pirmas = rand(0,4);
 // $antras = rand(0,4);
 
-// echo $pirmas;
-// echo '<br>';
-// echo $antras;
-// echo '<br>';
+// echo $pirmas, '<br>';
+// echo $antras, '<br>';
 
 
 // if ($pirmas> $antras) {
@@ -43,9 +41,7 @@ $trecias = rand(0,25);
 
 
 echo $pirmas, ', ', $antras,', ', $trecias;
-echo '<br>';
-echo '-----------';
-echo '<br>';
+echo '<br>----------- <br>';
 
 function vidurinis($a,$b,$c){
                                 // reikia fix'o
@@ -60,9 +56,8 @@ function vidurinis($a,$b,$c){
 }
 vidurinis($pirmas, $antras, $trecias);
 
-echo '<br>';
-echo '==========';
-echo '<br>';
+echo '<br> ========== <br>';
+
 // 4 
 
 $a = rand(1,10);
@@ -91,4 +86,6 @@ $k4 = rand(0,2);
 
 echo $k1, ', ', $k2,', ', $k3, ', ', $k4,'<br>';
 
+function kiekSkaitmenu($a, $b, $c, $d){
 
+}
