@@ -87,5 +87,66 @@ $k4 = rand(0,2);
 echo $k1, ', ', $k2,', ', $k3, ', ', $k4,'<br>';
 
 function kiekSkaitmenu($a, $b, $c, $d){
+    $nulis = 0;
+    $vienas = 0;
+    $du = 0;
 
+    switch ($a) {
+        case '0':
+            $nulis++;
+            break;
+        case '1':
+            $vienas++;
+            break;
+        case '2':
+            $du++;
+            break;
+        default:
+            # code...
+            break;
+    }
+    switch ($b) {
+        case '0':
+            $nulis++;
+            break;
+        case '1':
+            $vienas++;
+            break;
+        case '2':
+            $du++;
+            break;
+        default:
+            # code...
+            break;
+    }
+    switch ($c) {
+        case '0':
+            $nulis++;
+            break;
+        case '1':
+            $vienas++;
+            break;
+        case '2':
+            $du++;
+            break;
+        default:
+            # code...
+            break;
+    }
+    switch ($d) {
+        case '0':
+            $nulis++;
+            break;
+        case '1':
+            $vienas++;
+            break;
+        case '2':
+            $du++;
+            break;
+        default:
+            # code...
+            break;
+    }
+    echo '0 = ', $nulis, '; 1 = ', $vienas, '; 2 = ', $du;
 }
+kiekSkaitmenu($k1,$k2,$k3,$k4);
