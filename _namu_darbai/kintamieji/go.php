@@ -1,3 +1,5 @@
+<body style="background-color:cadetblue ;"></body>
+
 <?php
 // 1
 echo '1) <br>';
@@ -209,3 +211,50 @@ echo '<br> ========== <br>';
 // 10 /////////////////////////////////////////////////////////////
 echo '10) <br>';
 
+$sekundes = rand(1,60);
+$minutes = rand(1,60);
+$valandos = rand(1,24);
+
+echo "Laikrodis rodo: [ $valandos : $minutes : $sekundes ] <br>";
+
+$pridetineSekundes = rand(0,300);
+echo "Pridetines sekundes : $pridetineSekundes <br>";
+
+if($sekundes += $pridetineSekundes){
+    
+    if ($sekundes >= 60) {
+        $minutes++;
+        $sekundes += $pridetineSekundes - 60;
+        $extraSekundes = $sekundes;
+        $sekundes = 0;
+        
+    }
+    if ($minutes >=60) {
+        $valandos++;
+        $minutes = 0;
+    }
+    if ($valandos >=24) {
+        $valandos = 0;
+    }
+}
+
+echo "Laikrodis rodo: [ $valandos : $minutes : $sekundes ]";
+
+
+echo '<br> ========== <br>';
+// 11 /////////////////////////////////////////////////////////////
+echo '11) <br>';
+
+$sk1 = rand(1000,9999); 
+$sk2 = rand(1000,9999); 
+$sk3 = rand(1000,9999); 
+$sk4 = rand(1000,9999); 
+$sk5 = rand(1000,9999); 
+$sk6 = rand(1000,9999); 
+
+echo "$sk1 , $sk2 , $sk3 , $sk4 , $sk5 , $sk6";
+
+/*
+Naudokite funkcija rand(). Sugeneruokite 6 kintamuosius su atsitiktinem reikšmėm nuo 1000 iki 9999. Atspausdinkite reikšmes viename strige, išrūšiuotas nuo didžiausios iki mažiausios, atskirtas tarpais. Naudoti ciklų ir masyvų NEGALIMA.
+
+*/
