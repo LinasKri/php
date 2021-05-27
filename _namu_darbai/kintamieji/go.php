@@ -196,12 +196,12 @@ $kint1 = rand(0,100);
 $kint2 = rand(0,100);
 $kint3 = rand(0,100);
 
-echo $kint1. ' ' .$kint2. ' ' .$kint3.'<br>'; 
+echo $kint1. ', ' .$kint2. ', ' .$kint3.'<br>'; 
 
-echo 'Avg = '.($kint1 + $kint2 + $kint3) / 3 . '<br>';
+echo 'Avg = '.round(($kint1 + $kint2 + $kint3) / 3 ). '<br>';
 
 if (10 < $kint1 && $kint1 < 90 && 10 < $kint2 && $kint2 < 90 && 10 < $kint3 && $kint3 < 90) {
-    echo 'Avg2 = '.($kint1 + $kint2 + $kint3) / 3 . '<br>';
+    echo 'Avg2 = '.round(($kint1 + $kint2 + $kint3) / 3 ). '<br>';
 }
 
 
