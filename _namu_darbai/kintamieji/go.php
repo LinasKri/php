@@ -205,10 +205,13 @@ function zvakiuKaina($a){
         echo 'kiekis: ', $a, ' kaina: ', $a;
     }
     if ($a>= 1000 && $a<2000) {
-        echo 'kiekis: ', $a, ', kaina: ', $a - ($a* 0.03);
+        echo 'kiekis: ', $a, ', kaina: ', $a - ($a * 0.03);
     }
     if ($a>= 2000) {
-        echo "kiekis: $a, kaina: $a - ($a* 0.04)";
+        echo 'kiekis: ', $a, ', kaina: ', $a - ($a * 0.04);
     }
 }
 zvakiuKaina($zvakiuKiekis);
+echo '<br> ========== <br>';
+
+// 9
