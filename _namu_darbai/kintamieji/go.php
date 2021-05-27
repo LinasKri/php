@@ -8,10 +8,10 @@ $gimMetai = 1991;
 $esamiMetai = 2021;
 
 
-echo 'As esu ', $vardas, ' ', $pavarde,' . Man yra ', $esamiMetai - $gimMetai, ' metu.';
+echo 'As esu '. $vardas. ' '. $pavarde.' . Man yra '. $esamiMetai - $gimMetai. ' metu.';
 echo '<br> ========== <br>';
 
-// 2 
+// 2 ////////////////////////////////////////////////////////////////////
 echo '2) <br>';
 
 $pirmas = rand(0,4);
@@ -21,22 +21,25 @@ echo $pirmas, '<br>';
 echo $antras, '<br>';
 
 
-if ($pirmas> $antras) {
+if ($pirmas > $antras) {
     if ($antras != 0){
         echo round($pirmas/$antras,2);
     }else{
         echo 'dalyba is 0 negalima';
     }
-} else {
+} elseif($pirmas< $antras) {
     if ($pirmas != 0) {
         echo round($antras/$pirmas,2);
     } else {
         echo 'dalyba is 0 negalima';
     }
+}else {
+    echo 'Nariai lygus';
 }
+
 echo '<br>=========<br>';
 
-// 3 
+// 3 //////////////////////////////////////////////////////////////////////
 echo '3) <br>';
 
 $pirm = rand(0,25);
@@ -44,45 +47,43 @@ $antr = rand(0,25);
 $trec = rand(0,25);
 
 
-echo $pirm, ', ', $antr,', ', $trec;
+echo $pirm. ', '. $antr.', '. $trec;
 echo '<br>----------- <br>';
 
-function vidurinis($a,$b,$c){
-                                // reikia fix'o
-    if($a>$b && $a<$c){
-        echo $a;
-    }else if($b>$a && $b<$c){
-        echo $b;
-    }else if($c>$a && $c<$b){
-        echo $c;
-    }
-    
+if($pirm>$antr && $pirm<$trec && $antr< $trec){  // reikia fix'o  
+    echo $pirm;
+}elseif($antr>$pirm && $antr<$trec && $pirm<$trec){
+    echo $antr;
+}elseif($trec >$pirm && $trec<$antr && $pirm< $antr){
+    echo $trec;
+}elseif ($pirm===$antr|| $antr===$trec|| $pirm===$trec) {
+    echo 'Bent du nariai lygus';
 }
-vidurinis($pirm, $antr, $trec);
+
+// echo $pirm, $antr, $trec;
 
 echo '<br> ========== <br>';
 
-// 4 
+// 4 //////////////////////////////////////////////////////////////
 echo '4) <br>';
 
 $a = rand(1,10);
 $b = rand(1,10);
 $c = rand(1,10);
 
-echo $a, ', ', $b,', ', $c, '<br>';
+echo $a. ', '. $b.', '. $c. '<br>';
 
-function arTrikampis($a, $b, $c){
-    if(($a + $b) > $c && ($a + $c) > $b && ($b + $c) > $a ){
-        echo 'Trikampis gaunasi';
-    } else {
-        echo 'Trikampis nesigauna';
-    }
+
+if(($a + $b) > $c && ($a + $c) > $b && ($b + $c) > $a ){
+    echo 'Trikampis gaunasi';
+} else {
+    echo 'Trikampis nesigauna';
 }
-arTrikampis($a, $b, $c);
+
 
 echo '<br> ========== <br>';
 
-// 5 
+// 5 ////////////////////////////////////////////////////////////////////
 echo '5) <br>';
 
 $k1 = rand(0,2);
@@ -90,72 +91,48 @@ $k2 = rand(0,2);
 $k3 = rand(0,2);
 $k4 = rand(0,2);
 
-echo $k1, ', ', $k2,', ', $k3, ', ', $k4,'<br>';
+echo $k1. ', '. $k2.', '. $k3. ', '. $k4.'<br>';
 
-function kiekSkaitmenu($a, $b, $c, $d){
+
     $nulis = 0;
     $vienas = 0;
     $du = 0;
 
-    switch ($a) {
-        case '0':
-            $nulis++;
-            break;
-        case '1':
-            $vienas++;
-            break;
-        case '2':
-            $du++;
-            break;
-        default:
-            # code...
-            break;
-    }
-    switch ($b) {
-        case '0':
-            $nulis++;
-            break;
-        case '1':
-            $vienas++;
-            break;
-        case '2':
-            $du++;
-            break;
-        default:
-            # code...
-            break;
-    }
-    switch ($c) {
-        case '0':
-            $nulis++;
-            break;
-        case '1':
-            $vienas++;
-            break;
-        case '2':
-            $du++;
-            break;
-        default:
-            # code...
-            break;
-    }
-    switch ($d) {
-        case '0':
-            $nulis++;
-            break;
-        case '1':
-            $vienas++;
-            break;
-        case '2':
-            $du++;
-            break;
-        default:
-            # code...
-            break;
-    }
-    echo '0 = ', $nulis, '; 1 = ', $vienas, '; 2 = ', $du;
+
+if ($k1 === 0) {
+    $nulis++;
+}elseif($k1===1){
+    $vienas++;
+}else{
+    $du++;
 }
-kiekSkaitmenu($k1,$k2,$k3,$k4);
+if ($k2 === 0) {
+    $nulis++;
+}elseif($k2===1){
+    $vienas++;
+}else{
+    $du++;
+}
+if ($k3 === 0) {
+    $nulis++;
+}elseif($k3===1){
+    $vienas++;
+}else{
+    $du++;
+}
+if ($k4 === 0) {
+    $nulis++;
+}elseif($k4===1){
+    $vienas++;
+}else{
+    $du++;
+}
+
+
+
+echo '0 = ', $nulis, '; 1 = ', $vienas, '; 2 = ', $du;
+
+
 echo '<br> ========== <br>';
 
 // 6 
@@ -171,37 +148,35 @@ $sk1 = rand(-10,10);
 $sk2 = rand(-10,10);
 $sk3 = rand(-10,10);
                                     
-function coloredValues($a,$b,$c){
-    if ($a<0) {
-        echo "<font color='green'>",$a,"</font><br>";
-    }
-    if ($a===0) {
-        echo "<font color='red'>",$a,"</font><br>";
-    }
-    if ($a>0) {
-        echo "<font color='blue'>",$a,"</font><br>";
-    }
-    if ($b<0) {
-        echo "<font color='green'>",$b,"</font><br>";
-    }
-    if ($b===0) {
-        echo "<font color='red'>",$b,"</font><br>";
-    }
-    if ($b>0) {
-        echo "<font color='blue'>",$b,"</font><br>";
-    }
-    if ($c<0) {
-        echo "<font color='green'>",$c,"</font><br>";
-    }
-    if ($c===0) {
-        echo "<font color='red'>",$c,"</font><br>";
-    }
-    if ($c>0) {
-        echo "<font color='blue'>",$c,"</font><br>";
-    }
+
+if ($sk1<0) {
+    echo "<font color='green'>",$sk1,"</font><br>";
+}
+if ($sk1===0) {
+    echo "<font color='red'>",$sk1,"</font><br>";
+}
+if ($sk1>0) {
+    echo "<font color='blue'>",$sk1,"</font><br>";
+}
+if ($sk2<0) {
+    echo "<font color='green'>",$sk2,"</font><br>";
+}
+if ($sk2===0) {
+    echo "<font color='red'>",$sk2,"</font><br>";
+}
+if ($sk2>0) {
+    echo "<font color='blue'>",$sk2,"</font><br>";
+}
+if ($sk3<0) {
+    echo "<font color='green'>",$sk3,"</font><br>";
+}
+if ($sk3===0) {
+    echo "<font color='red'>",$sk3,"</font><br>";
+}
+if ($sk3>0) {
+    echo "<font color='blue'>",$sk3,"</font><br>";
 }
 
-coloredValues($sk1,$sk2,$sk3);
 echo '<br> ========== <br>';
 
 // 8
@@ -209,18 +184,16 @@ echo '8) <br>';
 
 $zvakiuKiekis = rand(5, 3000);
 
-function zvakiuKaina($a){
-    if ($a<1000){
-        echo 'kiekis: ', $a, ' kaina: ', $a;
-    }
-    if ($a>= 1000 && $a<2000) {
-        echo 'kiekis: ', $a, ', kaina: ', $a - ($a * 0.03);
-    }
-    if ($a>= 2000) {
-        echo 'kiekis: ', $a, ', kaina: ', $a - ($a * 0.04);
-    }
+if ($zvakiuKiekis<1000){
+    echo 'kiekis: ', $zvakiuKiekis, ' kaina: ', $zvakiuKiekis;
 }
-zvakiuKaina($zvakiuKiekis);
+if ($zvakiuKiekis>= 1000 && $zvakiuKiekis<2000) {
+    echo 'kiekis: ', $zvakiuKiekis, ', kaina: ', $zvakiuKiekis - ($zvakiuKiekis * 0.03);
+}
+if ($zvakiuKiekis>= 2000) {
+    echo 'kiekis: ', $zvakiuKiekis, ', kaina: ', $zvakiuKiekis - ($zvakiuKiekis * 0.04);
+}
+
 echo '<br> ========== <br>';
 
 // 9
@@ -233,7 +206,10 @@ $kint3 = rand(0,100);
 echo $kint1, ' ',$kint2, ' ',$kint3,'<br>'; 
 
 function avg($a,$b,$c){
-    echo ($a+$b+$c)/3;
+    echo ($a+$b+$c)/3, '<br>';
 }
 avg($kint1, $kint2, $kint3);
 
+function avgSuAtmetimu($a,$b,$c){
+    
+}
