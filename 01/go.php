@@ -156,42 +156,42 @@ echo '<br> ========== <br>';
 
 $busimasH = rand(1,6);
 echo '<h', $busimasH, '>', $busimasH, '</h', $busimasH,'>', '<br>';
-
+//    <h      4        >
 // 7
 
 $sk1 = rand(-10,10);
 $sk2 = rand(-10,10);
 $sk3 = rand(-10,10);
-                                    // reikia fix
+                                    
 function coloredValues($a,$b,$c){
     if ($a<0) {
-        echo "<font color='green'>",$sk1,"</font><br>";
+        echo "<font color='green'>",$a,"</font><br>";
     }
     if ($a===0) {
-        echo "<font color='red'>",$sk1,"</font><br>";
+        echo "<font color='red'>",$a,"</font><br>";
     }
     if ($a>0) {
-        echo "<font color='blue'>",$sk1,"</font><br>";
+        echo "<font color='blue'>",$a,"</font><br>";
     }
     if ($b<0) {
-        echo "<font color='green'>",$sk1,"</font><br>";
+        echo "<font color='green'>",$b,"</font><br>";
     }
     if ($b===0) {
-        echo "<font color='red'>",$sk1,"</font><br>";
+        echo "<font color='red'>",$b,"</font><br>";
     }
     if ($b>0) {
-        echo "<font color='blue'>",$sk1,"</font><br>";
+        echo "<font color='blue'>",$b,"</font><br>";
     }
     if ($c<0) {
-        echo "<font color='green'>",$sk1,"</font><br>";
+        echo "<font color='green'>",$c,"</font><br>";
     }
     if ($c===0) {
-        echo "<font color='red'>",$sk1,"</font><br>";
+        echo "<font color='red'>",$c,"</font><br>";
     }
     if ($c>0) {
-        echo "<font color='blue'>",$sk1,"</font><br>";
+        echo "<font color='blue'>",$c,"</font><br>";
     }
 }
 
-coloredValues($ka1,$sk2,$sk3);
+coloredValues($sk1,$sk2,$sk3);
 
