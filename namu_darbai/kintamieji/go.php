@@ -201,5 +201,14 @@ echo '<br> ========== <br>';
 $zvakiuKiekis = rand(5, 3000);
 
 function zvakiuKaina($a){
-    if ($a< )
+    if ($a<1000){
+        echo 'kiekis: ', $a, ' kaina: ', $a;
+    }
+    if ($a>= 1000 && $a<2000) {
+        echo 'kiekis: ', $a, ', kaina: ', $a - ($a* 0.03);
+    }
+    if ($a>= 2000) {
+        echo "kiekis: $a, kaina: $a - ($a* 0.04)";
+    }
 }
+zvakiuKaina($zvakiuKiekis);
