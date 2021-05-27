@@ -155,6 +155,7 @@ if ($sk1===0) {
 if ($sk1>0) {
     echo "<font color='blue'>",$sk1,"</font><br>";
 }
+//-----------
 if ($sk2<0) {
     echo "<font color='green'>",$sk2,"</font><br>";
 }
@@ -164,6 +165,7 @@ if ($sk2===0) {
 if ($sk2>0) {
     echo "<font color='blue'>",$sk2,"</font><br>";
 }
+//-----------
 if ($sk3<0) {
     echo "<font color='green'>",$sk3,"</font><br>";
 }
