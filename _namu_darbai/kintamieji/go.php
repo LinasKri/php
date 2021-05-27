@@ -9,9 +9,9 @@ $esamiMetai = 2021;
 
 
 echo 'As esu '. $vardas. ' '. $pavarde.' . Man yra '. $esamiMetai - $gimMetai. ' metu.';
-echo '<br> ========== <br>';
 
-// 2 ////////////////////////////////////////////////////////////////////
+echo '<br> ========== <br>';
+// 2 //////////////////////////////////////////////////////////////
 echo '2) <br>';
 
 $pirmas = rand(0,4);
@@ -38,8 +38,7 @@ if ($pirmas > $antras) {
 }
 
 echo '<br>=========<br>';
-
-// 3 //////////////////////////////////////////////////////////////////////
+// 3 //////////////////////////////////////////////////////////////
 echo '3) <br>';
 
 $pirm = rand(0,25);
@@ -63,7 +62,6 @@ if($pirm>$antr && $pirm<$trec && $antr< $trec){  // reikia fix'o
 // echo $pirm, $antr, $trec;
 
 echo '<br> ========== <br>';
-
 // 4 //////////////////////////////////////////////////////////////
 echo '4) <br>';
 
@@ -82,7 +80,6 @@ if(($a + $b) > $c && ($a + $c) > $b && ($b + $c) > $a ){
 
 
 echo '<br> ========== <br>';
-
 // 5 ////////////////////////////////////////////////////////////////////
 echo '5) <br>';
 
@@ -128,20 +125,18 @@ if ($k4 === 0) {
     $du++;
 }
 
-
-
 echo '0 = ', $nulis, '; 1 = ', $vienas, '; 2 = ', $du;
 
 
 echo '<br> ========== <br>';
-
-// 6 
+// 6 ///////////////////////////////////////////////////////////
 echo '6) <br>';
 
 $busimasH = rand(1,6);
 echo '<h', $busimasH, '>', $busimasH, '</h', $busimasH,'>', '<br>';
 
-// 7
+echo '<br> ========== <br>';
+// 7 //////////////////////////////////////////////////////////////
 echo '7) <br>';
 
 $sk1 = rand(-10,10);
@@ -178,38 +173,39 @@ if ($sk3>0) {
 }
 
 echo '<br> ========== <br>';
-
-// 8
+// 8 //////////////////////////////////////////////////////////////
 echo '8) <br>';
 
 $zvakiuKiekis = rand(5, 3000);
 
 if ($zvakiuKiekis<1000){
-    echo 'kiekis: ', $zvakiuKiekis, ' kaina: ', $zvakiuKiekis;
+    echo 'kiekis: '. $zvakiuKiekis. ', kaina: '. $zvakiuKiekis;
 }
 if ($zvakiuKiekis>= 1000 && $zvakiuKiekis<2000) {
-    echo 'kiekis: ', $zvakiuKiekis, ', kaina: ', $zvakiuKiekis - ($zvakiuKiekis * 0.03);
+    echo 'kiekis: '. $zvakiuKiekis.' , nuolaida: '.$zvakiuKiekis * 0.03 . ' , kaina: '. $zvakiuKiekis - ($zvakiuKiekis * 0.03);
 }
 if ($zvakiuKiekis>= 2000) {
-    echo 'kiekis: ', $zvakiuKiekis, ', kaina: ', $zvakiuKiekis - ($zvakiuKiekis * 0.04);
+    echo 'kiekis: '. $zvakiuKiekis. ' , nuolaida: '.$zvakiuKiekis * 0.04 .' , kaina: '. $zvakiuKiekis - ($zvakiuKiekis * 0.04);
 }
 
 echo '<br> ========== <br>';
-
-// 9
+// 9 //////////////////////////////////////////////////////////////
 echo '9) <br>';
 
 $kint1 = rand(0,100);
 $kint2 = rand(0,100);
 $kint3 = rand(0,100);
 
-echo $kint1, ' ',$kint2, ' ',$kint3,'<br>'; 
+echo $kint1. ' ' .$kint2. ' ' .$kint3.'<br>'; 
 
-function avg($a,$b,$c){
-    echo ($a+$b+$c)/3, '<br>';
-}
-avg($kint1, $kint2, $kint3);
+echo 'Avg = '.($kint1 + $kint2 + $kint3) / 3 . '<br>';
 
-function avgSuAtmetimu($a,$b,$c){
-    
+if (10 < $kint1 && $kint1 < 90 && 10 < $kint2 && $kint2 < 90 && 10 < $kint3 && $kint3 < 90) {
+    echo 'Avg2 = '.($kint1 + $kint2 + $kint3) / 3 . '<br>';
 }
+
+
+echo '<br> ========== <br>';
+// 10 /////////////////////////////////////////////////////////////
+echo '10) <br>';
+
