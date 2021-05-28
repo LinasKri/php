@@ -50,8 +50,8 @@ $trec = rand(0,25);
 
 echo $pirm. ', '. $antr.', '. $trec;
 echo '<br>----------- <br>';
-
-if($pirm>$antr && $pirm<$trec && $antr< $trec){  // reikia fix'o  
+                                                 // Neuzbaigtas, reikia fix'o  
+if($pirm>$antr && $pirm<$trec && $antr< $trec){   
     echo $pirm;
 }elseif($antr>$pirm && $antr<$trec && $pirm<$trec){
     echo $antr;
@@ -74,7 +74,7 @@ $c = rand(1,10);
 echo $a. ', '. $b.', '. $c. '<br>';
 
 
-if(($a + $b) > $c && ($a + $c) > $b && ($b + $c) > $a ){
+if($a + $b > $c && $a + $c > $b && $b + $c > $a ){
     echo 'Trikampis gaunasi';
 } else {
     echo 'Trikampis nesigauna';
@@ -127,7 +127,7 @@ if ($k4 === 0) {
     $du++;
 }
 
-echo '0 = ', $nulis, '; 1 = ', $vienas, '; 2 = ', $du;
+echo '0 = '. $nulis. '; 1 = '. $vienas. '; 2 = '. $du;
 
 
 echo '<br> ========== <br>';
@@ -135,7 +135,7 @@ echo '<br> ========== <br>';
 echo '6) <br>';
 
 $busimasH = rand(1,6);
-echo '<h', $busimasH, '>', $busimasH, '</h', $busimasH,'>', '<br>';
+echo '<h'. $busimasH. '>'. $busimasH. '</h'. $busimasH.'>'. '<br>';
 
 echo '<br> ========== <br>';
 // 7 //////////////////////////////////////////////////////////////
@@ -222,30 +222,49 @@ echo "Laikrodis rodo: [ $valandos : $minutes : $sekundes ] <br>";
 $pridetineSekundes = rand(0,300);
 echo "Pridetines sekundes : $pridetineSekundes <br>";
 
-if($sekundes += $pridetineSekundes){
-    
+$sekundes += $pridetineSekundes;
+                                  // Neuzbaigtas
+if ($sekundes >= 60) {
+    $minutes++;
+    $sekundes- 60;
     if ($sekundes >= 60) {
         $minutes++;
-        $sekundes += $pridetineSekundes - 60;
-        $extraSekundes = $sekundes;
-        $sekundes = 0;
-        
-    }
-    if ($minutes >=60) {
-        $valandos++;
-        $minutes = 0;
-    }
-    if ($valandos >=24) {
-        $valandos = 0;
-    }
+        $sekundes- 60;
+        if ($sekundes >= 60) {
+            $minutes++;
+            $sekundes - 60;
+            if ($sekundes >= 60) {
+                $minutes++;
+                $sekundes- 60;
+                if ($sekundes >= 60) {
+                    $minutes++;
+                    $sekundes - 60;
+                    if ($sekundes >= 60) {
+                        $minutes++;
+                        $sekundes - 60;
+                    }
+                }
+            }
+        }
+    }    
 }
 
+if ($minutes >=60) {
+    $valandos++;
+    $minutes = 0;
+}
+if ($valandos >=24) {
+    $valandos = 0;
+}
 echo "Laikrodis rodo: [ $valandos : $minutes : $sekundes ]";
+
+
 
 
 echo '<br> ========== <br>';
 // 11 /////////////////////////////////////////////////////////////
 echo '11) <br>';
+                                // Neuzbaigtas
 
 $sk1 = rand(1000,9999); 
 $sk2 = rand(1000,9999); 
@@ -256,7 +275,3 @@ $sk6 = rand(1000,9999);
 
 echo "$sk1 , $sk2 , $sk3 , $sk4 , $sk5 , $sk6";
 
-/*
-Naudokite funkcija rand(). Sugeneruokite 6 kintamuosius su atsitiktinem reikšmėm nuo 1000 iki 9999. Atspausdinkite reikšmes viename strige, išrūšiuotas nuo didžiausios iki mažiausios, atskirtas tarpais. Naudoti ciklų ir masyvų NEGALIMA.
-
-*/
