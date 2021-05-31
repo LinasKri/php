@@ -62,4 +62,22 @@ echo '<br><hr>';
 // 7 ///////////////////////////////////////////////////////////////////////////
 echo '7) <br>';
 
-$pavadinimas = 'An American in Paris'; 
+$pavadinimas1 = 'An American in Paris'; 
+$pavadinimas2 = 'Breakfast at Tiffany\'s'; 
+$pavadinimas3 = '2001: A Space Odyssey'; 
+$pavadinimas4 = 'It\'s a Wonderful Life'; 
+
+function balsiuNaikintojas($string){
+    $string = strtolower($string);
+    $string = str_replace(['a','e','i','y','o','u'],'',$string);
+    return $string.'<br>';
+}
+
+echo balsiuNaikintojas($pavadinimas1);
+echo balsiuNaikintojas($pavadinimas2);
+echo balsiuNaikintojas($pavadinimas3);
+echo balsiuNaikintojas($pavadinimas4);
+
+echo '<br><hr>';
+// 8 ///////////////////////////////////////////////////////////////////////////
+echo '8) <br>';
