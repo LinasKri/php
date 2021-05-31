@@ -58,6 +58,7 @@ $pavadinimas = 'An American in Paris';
 
 echo substr_count(strtolower($pavadinimas),'a');
 
+
 echo '<br><hr>';
 // 7 ///////////////////////////////////////////////////////////////////////////
 echo '7) <br>';
@@ -68,8 +69,7 @@ $pavadinimas3 = '2001: A Space Odyssey';
 $pavadinimas4 = 'It\'s a Wonderful Life'; 
 
 function balsiuNaikintojas($string){
-    $string = strtolower($string);
-    $string = str_replace(['a','e','i','y','o','u'],'',$string);
+    $string = str_replace(['A','a','E','e','I','i','Y','y','O','o','U','u'],'',$string);
     return $string.'<br>';
 }
 
@@ -79,5 +79,22 @@ echo balsiuNaikintojas($pavadinimas3);
 echo balsiuNaikintojas($pavadinimas4);
 
 echo '<br><hr>';
-// 8 ///////////////////////////////////////////////////////////////////////////
+// 8 ////////////////////////////////////////////////////////          ///////////////////
 echo '8) <br>';
+
+$starWars ='Star Wars: Episode '.str_repeat(' ', rand(0,5)). rand(1,9) . ' - A New Hope';
+echo $starWars.'<br> ';
+
+$starWars = str_replace("str_repeat(' ',rand(0,5)). rand(1,9)", '4', $starWars);
+echo $starWars; 
+
+;
+
+echo '<br><hr>';
+// 9 ///////////////////////////////////////////////////////////////////////////
+echo '9) <br>';
+
+$hood = "Don't Be a Menace to South Central While Drinking Your Juice in the Hood";
+
+str_word_count($hood,5);
+echo $hood;
