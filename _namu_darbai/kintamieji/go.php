@@ -225,9 +225,9 @@ echo '<br> ========== <br>';
 // 10 /////////////////////////////////////////////////////////////
 echo '10) <br>';
 
-$sekundes = rand(1,59);
-$minutes = rand(1,59);
-$valandos = rand(1,23);
+$sekundes = rand(1,60);
+$minutes = rand(1,60);
+$valandos = rand(1,24);
 
 echo "Laikrodis rodo: [ $valandos : $minutes : $sekundes ] <br>";
 
@@ -236,22 +236,22 @@ echo "Pridetines sekundes : $pridetineSekundes <br>";
 
 $sekundes += $pridetineSekundes;
                                   // Neuzbaigtas
-if ($sekundes > 59) {
+if ($sekundes >= 60) {
     $sekundes - 60;
     $minutes++;
-    if ($sekundes > 59) {
+    if ($sekundes >= 60) {
         $sekundes - 60;
         $minutes++;
-        if ($sekundes > 59) {
+        if ($sekundes >= 60) {
             $sekundes - 60;
             $minutes++;
-            if ($sekundes > 59) {
+            if ($sekundes >= 60) {
                 $sekundes - 60;
                 $minutes++;
-                if ($sekundes > 59) {
+                if ($sekundes >= 60) {
                     $sekundes - 60;
                     $minutes++;
-                    if ($sekundes > 59) {
+                    if ($sekundes >= 60) {
                         $sekundes - 60;
                         $minutes++;
                     }
@@ -261,11 +261,11 @@ if ($sekundes > 59) {
     }    
 }
 
-if ($minutes > 59) {
+if ($minutes >= 60) {
     $valandos++;
     $minutes - 60;
 }
-if ($valandos > 23) {
+if ($valandos >= 24) {
     $valandos - 24;
 }
 echo "Laikrodis rodo: [ $valandos : $minutes : $sekundes ]";
