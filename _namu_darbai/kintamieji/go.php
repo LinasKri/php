@@ -237,30 +237,29 @@ echo "Pridetines sekundes : $pridetineSekundes <br>";
 $sekundes += $pridetineSekundes;
                                   // Neuzbaigtas
 if ($sekundes >= 60) {
-    $sekundes - 60;
     $minutes++;
+    $sekundes - 60;
     if ($sekundes >= 60) {
-        $sekundes - 60;
         $minutes++;
+        $sekundes - 60;
         if ($sekundes >= 60) {
-            $sekundes - 60;
             $minutes++;
+            $sekundes - 60;
             if ($sekundes >= 60) {
-                $sekundes - 60;
                 $minutes++;
+                $sekundes - 60;
                 if ($sekundes >= 60) {
-                    $sekundes - 60;
                     $minutes++;
+                    $sekundes - 60;
                     if ($sekundes >= 60) {
-                        $sekundes - 60;
                         $minutes++;
+                        $sekundes - 60;
                     }
                 }
             }
         }
-    }    
+    } 
 }
-
 if ($minutes >= 60) {
     $valandos++;
     $minutes - 60;
