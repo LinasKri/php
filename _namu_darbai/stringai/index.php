@@ -46,5 +46,20 @@ echo '<br><hr>';
 // 5 ///////////////////////////////////////////////////////////////////////////
 echo '5) <br>';
 
-$vardas = 'Keanu'; 
-$pavarde = 'Reeves';
+$pavadinimas = 'An American in Paris'; 
+
+echo str_replace(['A','a'],'*',$pavadinimas);
+
+echo '<br><hr>';
+// 6 ///////////////////////////////////////////////////////////////////////////
+echo '6) <br>';
+
+$pavadinimas = 'An American in Paris'; 
+
+echo substr_count(strtolower($pavadinimas),'a');
+
+echo '<br><hr>';
+// 7 ///////////////////////////////////////////////////////////////////////////
+echo '7) <br>';
+
+$pavadinimas = 'An American in Paris'; 
