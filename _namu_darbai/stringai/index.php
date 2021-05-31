@@ -25,3 +25,9 @@ echo strtoupper($vardas) . ' ' . strtolower($pavarde);
 echo '<br><hr>';
 // 3 ///////////////////////////////////////////////////////////////////////////
 echo '3) <br>';
+
+$vardas = 'Keanu'; 
+$pavarde = 'Reeves';
+$inicialai = $vardas[0].$pavarde[0];
+
+echo $inicialai;
