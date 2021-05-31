@@ -31,3 +31,20 @@ $pavarde = 'Reeves';
 $inicialai = $vardas[0].$pavarde[0];
 
 echo $inicialai;
+
+echo '<br><hr>';
+// 4 ///////////////////////////////////////////////////////////////////////////
+echo '4) <br>';
+
+$vardas = 'Keanu'; 
+$pavarde = 'Reeves';
+$paskutines3raides = substr($vardas,-3).substr($pavarde,-3);
+
+echo $paskutines3raides;
+
+echo '<br><hr>';
+// 5 ///////////////////////////////////////////////////////////////////////////
+echo '5) <br>';
+
+$vardas = 'Keanu'; 
+$pavarde = 'Reeves';
