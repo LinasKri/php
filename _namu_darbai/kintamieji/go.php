@@ -50,14 +50,14 @@ $trec = rand(0,25);
 
 echo $pirm. ', '. $antr.', '. $trec;
 echo '<br>----------- <br>';
-                                                 // Neuzbaigtas, reikia fix'o  
-if($pirm>$antr && $pirm<$trec && $antr< $trec){   
+
+if($pirm > $antr && $pirm < $trec || $pirm < $antr && $pirm > $trec){   
     echo $pirm;
-}elseif($antr>$pirm && $antr<$trec && $pirm<$trec){
+}elseif($antr > $pirm && $antr < $trec || $antr < $pirm && $antr > $trec){
     echo $antr;
-}elseif($trec >$pirm && $trec<$antr && $pirm< $antr){
+}elseif($trec > $pirm && $trec < $antr || $trec < $pirm && $trec > $antr){
     echo $trec;
-}elseif ($pirm===$antr|| $antr===$trec|| $pirm===$trec) {
+}elseif ($pirm === $antr|| $antr === $trec|| $pirm === $trec) {
     echo 'Bent du nariai lygus';
 }
 
@@ -127,7 +127,7 @@ if ($k4 === 0) {
     $du++;
 }
 
-echo '0 = '. $nulis. '; 1 = '. $vienas. '; 2 = '. $du;
+echo "0 = $nulis; 1 = $vienas; 2 = $du";
 
 
 echo '<br> ========== <br>';
@@ -135,7 +135,7 @@ echo '<br> ========== <br>';
 echo '6) <br>';
 
 $busimasH = rand(1,6);
-echo '<h'. $busimasH. '>'. $busimasH. '</h'. $busimasH.'>'. '<br>';
+echo "<h$busimasH> $busimasH </h$busimasH>";
 
 echo '<br> ========== <br>';
 // 7 //////////////////////////////////////////////////////////////
@@ -147,33 +147,33 @@ $sk3 = rand(-10,10);
                                     
 
 if ($sk1<0) {
-    echo "<font color='green'>",$sk1,"</font><br>";
+    echo "<font color='green'>$sk1</font><br>";
 }
 if ($sk1===0) {
-    echo "<font color='red'>",$sk1,"</font><br>";
+    echo "<font color='red'>$sk1</font><br>";
 }
 if ($sk1>0) {
-    echo "<font color='blue'>",$sk1,"</font><br>";
+    echo "<font color='blue'>$sk1</font><br>";
 }
 //-----------
 if ($sk2<0) {
-    echo "<font color='green'>",$sk2,"</font><br>";
+    echo "<font color='green'>$sk2</font><br>";
 }
 if ($sk2===0) {
-    echo "<font color='red'>",$sk2,"</font><br>";
+    echo "<font color='red'>$sk2</font><br>";
 }
 if ($sk2>0) {
-    echo "<font color='blue'>",$sk2,"</font><br>";
+    echo "<font color='blue'>$sk2</font><br>";
 }
 //-----------
 if ($sk3<0) {
-    echo "<font color='green'>",$sk3,"</font><br>";
+    echo "<font color='green'>$sk3</font><br>";
 }
 if ($sk3===0) {
-    echo "<font color='red'>",$sk3,"</font><br>";
+    echo "<font color='red'>$sk3</font><br>";
 }
 if ($sk3>0) {
-    echo "<font color='blue'>",$sk3,"</font><br>";
+    echo "<font color='blue'>$sk3</font><br>";
 }
 
 echo '<br> ========== <br>';
@@ -183,7 +183,7 @@ echo '8) <br>';
 $zvakiuKiekis = rand(5, 3000);
 
 if ($zvakiuKiekis<1000){
-    echo 'kiekis: '. $zvakiuKiekis. ', kaina: '. $zvakiuKiekis;
+    echo "kiekis: $zvakiuKiekis, nuolaida = 0, kaina: $zvakiuKiekis";
 }
 if ($zvakiuKiekis>= 1000 && $zvakiuKiekis<2000) {
     echo 'kiekis: '. $zvakiuKiekis.' , nuolaida: '.$zvakiuKiekis * 0.03 . ' , kaina: '. $zvakiuKiekis - ($zvakiuKiekis * 0.03);
@@ -199,23 +199,35 @@ echo '9) <br>';
 $kint1 = rand(0,100);
 $kint2 = rand(0,100);
 $kint3 = rand(0,100);
+$kiekis = 3;
+echo "$kint1, $kint2, $kint3 <br>"; 
 
-echo $kint1. ', ' .$kint2. ', ' .$kint3.'<br>'; 
+echo 'Avg = '.round(($kint1 + $kint2 + $kint3) / $kiekis ). '<br>';
 
-echo 'Avg = '.round(($kint1 + $kint2 + $kint3) / 3 ). '<br>';
-
-if (10 < $kint1 && $kint1 < 90 && 10 < $kint2 && $kint2 < 90 && 10 < $kint3 && $kint3 < 90) {
-    echo 'Avg2 = '.round(($kint1 + $kint2 + $kint3) / 3 ). '<br>';
+if (10 > $kint1 || $kint1 > 90) {
+    $kint1 = 0;
+    $kiekis--;
 }
-
+if (10 > $kint2 || $kint2 > 90) {
+    $kint2 = 0;
+    $kiekis--;
+}
+if (10 > $kint3 || $kint3 > 90) {
+    $kint3 = 0;
+    $kiekis--;
+}
+if ($kiekis != 0) {
+    echo 'Avg2 = '.round(($kint1 + $kint2 + $kint3) / $kiekis ). '<br>';
+    
+}
 
 echo '<br> ========== <br>';
 // 10 /////////////////////////////////////////////////////////////
 echo '10) <br>';
 
-$sekundes = rand(1,60);
-$minutes = rand(1,60);
-$valandos = rand(1,24);
+$sekundes = rand(1,59);
+$minutes = rand(1,59);
+$valandos = rand(1,23);
 
 echo "Laikrodis rodo: [ $valandos : $minutes : $sekundes ] <br>";
 
@@ -224,24 +236,24 @@ echo "Pridetines sekundes : $pridetineSekundes <br>";
 
 $sekundes += $pridetineSekundes;
                                   // Neuzbaigtas
-if ($sekundes >= 60) {
+if ($sekundes > 59) {
+    $sekundes - 60;
     $minutes++;
-    $sekundes- 60;
-    if ($sekundes >= 60) {
+    if ($sekundes > 59) {
+        $sekundes - 60;
         $minutes++;
-        $sekundes- 60;
-        if ($sekundes >= 60) {
-            $minutes++;
+        if ($sekundes > 59) {
             $sekundes - 60;
-            if ($sekundes >= 60) {
+            $minutes++;
+            if ($sekundes > 59) {
+                $sekundes - 60;
                 $minutes++;
-                $sekundes- 60;
-                if ($sekundes >= 60) {
-                    $minutes++;
+                if ($sekundes > 59) {
                     $sekundes - 60;
-                    if ($sekundes >= 60) {
-                        $minutes++;
+                    $minutes++;
+                    if ($sekundes > 59) {
                         $sekundes - 60;
+                        $minutes++;
                     }
                 }
             }
@@ -249,12 +261,12 @@ if ($sekundes >= 60) {
     }    
 }
 
-if ($minutes >=60) {
+if ($minutes > 59) {
     $valandos++;
-    $minutes = 0;
+    $minutes - 60;
 }
-if ($valandos >=24) {
-    $valandos = 0;
+if ($valandos > 23) {
+    $valandos - 24;
 }
 echo "Laikrodis rodo: [ $valandos : $minutes : $sekundes ]";
 
