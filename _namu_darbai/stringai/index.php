@@ -100,11 +100,18 @@ echo '9) <br>';
 $hood = "Don't Be a Menace to South Central While Drinking Your Juice in the Hood";
 $rajonas = "Tik nereikia gąsdinti Pietų Centro, geriant sultis pas save kvartale";
 
-function wordCounter($string, $wordLength){
-    $arr = explode(' ', $string);
-    echo $arr;
 
+$words = explode(' ', $hood);
+// $words = explode(' ', $rajonas);
+$counter = 0;
+
+for($i = 0; $i < count($words); $i++) {
+    if (mb_strlen($words[$i]) <= 5){
+        $counter++;
+    }
 }
+echo "Žodžių, trumpenių arba lygių nei 5 raidės skaičius: $counter";
+
 
 echo '<br><hr>';
 // 10 /////////////////////////////////////////////////////////////////////////////////
