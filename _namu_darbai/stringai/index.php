@@ -2,6 +2,7 @@
 <?php
 // 1 ///////////////////////////////////////////////////////////////////////////
 echo '1) <br>';
+
 $vardas = 'Keanu'; 
 $pavarde = 'Reeves';
 
@@ -38,7 +39,7 @@ echo '4) <br>';
 
 $vardas = 'Keanu'; 
 $pavarde = 'Reeves';
-$paskutines3raides = substr($vardas,-3).substr($pavarde,-3);
+$paskutines3raides = substr($vardas,-3).' '.substr($pavarde,-3);
 
 echo $paskutines3raides;
 
@@ -82,14 +83,13 @@ echo balsiuNaikintojas($pavadinimas4);
 
 
 echo '<br><hr>';
-// 8 //////////////////////////////////////////////////////// [NEBAIGTAS] ///////////////////
+// 8 ///////////////////////////////////////////////////////////////////////////
 echo '8) <br>';
 
 $starWars ='Star Wars: Episode '.str_repeat(' ', rand(0,5)). rand(1,9) . ' - A New Hope';
 echo $starWars.'<br> ';
 
-$starWars = str_replace([str_repeat(' ',rand(0,5)). rand(1,9)], '4', $starWars);
-echo $starWars;
+echo 'Ep.: '.preg_replace('/[^0-9]/', '', $starWars);
 
 
 
@@ -101,7 +101,8 @@ $hood = "Don't Be a Menace to South Central While Drinking Your Juice in the Hoo
 $rajonas = "Tik nereikia gąsdinti Pietų Centro, geriant sultis pas save kvartale";
 
 function wordCounter($string, $wordLength){
-
+    $arr = explode(' ', $string);
+    echo $arr;
 
 }
 
