@@ -42,6 +42,7 @@ $paskutines3raides = substr($vardas,-3).substr($pavarde,-3);
 
 echo $paskutines3raides;
 
+
 echo '<br><hr>';
 // 5 ///////////////////////////////////////////////////////////////////////////
 echo '5) <br>';
@@ -49,6 +50,7 @@ echo '5) <br>';
 $pavadinimas = 'An American in Paris'; 
 
 echo str_replace(['A','a'],'*',$pavadinimas);
+
 
 echo '<br><hr>';
 // 6 ///////////////////////////////////////////////////////////////////////////
@@ -78,23 +80,33 @@ echo balsiuNaikintojas($pavadinimas2);
 echo balsiuNaikintojas($pavadinimas3);
 echo balsiuNaikintojas($pavadinimas4);
 
+
 echo '<br><hr>';
-// 8 ////////////////////////////////////////////////////////          ///////////////////
+// 8 //////////////////////////////////////////////////////// [NEBAIGTAS] ///////////////////
 echo '8) <br>';
 
 $starWars ='Star Wars: Episode '.str_repeat(' ', rand(0,5)). rand(1,9) . ' - A New Hope';
 echo $starWars.'<br> ';
 
-$starWars = str_replace("str_repeat(' ',rand(0,5)). rand(1,9)", '4', $starWars);
-echo $starWars; 
+$starWars = str_replace([str_repeat(' ',rand(0,5)). rand(1,9)], '4', $starWars);
+echo $starWars;
 
-;
+
 
 echo '<br><hr>';
-// 9 ///////////////////////////////////////////////////////////////////////////
+// 9 ////////////////////////////////////////////////////////// [NEBAIGTAS] /////////////////
 echo '9) <br>';
 
 $hood = "Don't Be a Menace to South Central While Drinking Your Juice in the Hood";
+$rajonas = "Tik nereikia gąsdinti Pietų Centro, geriant sultis pas save kvartale";
 
-str_word_count($hood,5);
-echo $hood;
+function wordCounter($string, $wordLength){
+
+
+}
+
+echo '<br><hr>';
+// 10 /////////////////////////////////////////////////////////////////////////////////
+echo '10) <br>';
+
+echo chr(rand(97, 122)) . chr(rand(97, 122)) . chr(rand(97, 122));
