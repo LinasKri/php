@@ -42,10 +42,10 @@ echo "<br>Skaiciu didesniu kaip 150 yra $counter";
 
 
 echo '<br><hr>';
-// 3 ///////////////////////////////////////////////////////////////////////////
+// 3 ///////////////////////////////////////////// [Nebaigta] //////////////////////////////
 echo '3) <br>';
 
-echo "<div style='overflow-wrap: break-word;'>";
+
 
 $aibe = rand(1,rand(3000,4000));
 echo "aibe: $aibe <br>";
@@ -57,9 +57,18 @@ for ($i = 77; $i <= $aibe; $i++) {
     }
 }
 
-echo '</div>';
-
 
 echo '<br><hr>';
 // 4 ///////////////////////////////////////////////////////////////////////////
-echo '4) <br>';
+echo '4) <br><br>';
+
+echo "<div style='line-height: 50%;'>";
+
+for($i=0; $i<25; $i++) {
+    for($j=0; $j<25; $j++) {
+    echo '*';
+    }
+    echo '<br>';
+}
+
+echo '</div>';
