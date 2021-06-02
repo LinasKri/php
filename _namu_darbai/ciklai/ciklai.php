@@ -59,16 +59,37 @@ for ($i = 77; $i <= $aibe; $i++) {
 
 
 echo '<br><hr>';
-// 4 ///////////////////////////////////////////////////////////////////////////
-echo '4) <br><br>';
+// 4, 5 /////////////////////////////////////////////////////////// [Nebaigta] ////////////////
+echo '4, 5) <br><br>';
 
 echo "<div style='line-height: 50%;'>";
 
-for($i=0; $i<25; $i++) {
-    for($j=0; $j<25; $j++) {
-    echo '*';
+$side = 25;
+
+for($i = 0; $i < $side; $i++) {
+    for($j = 0; $j < $side; $j++) {
+        echo '*';
     }
     echo '<br>';
 }
 
+echo '<br>';
+
+for($i=0; $i <= $side; $i++) {
+    for($j=0; $j <= $side; $j++) {
+
+        if ($i===$j) {
+            echo "<font color='red'>*</font>";
+
+        } elseif ($i + $j === $side) {
+            echo "<font color='red'>*</font>";
+            
+        } else {
+            echo '*';
+        }
+
+    }
+    echo '<br>';
+
+}
 echo '</div>';
