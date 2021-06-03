@@ -83,6 +83,15 @@ foreach ($masyvas_f2 as $key => &$value) {
 }
 print_r($masyvas_f2);
 
+echo'<br>h) <br>';//-----------------------------
+foreach ($masyvas_d as $value) {
+    if ($value > 10) {
+        echo '['.array_search($value, $masyvas_d).'] => '.$value.' <br>'; 
+        break ;
+    }
+    
+}
+
 echo '<br><hr>';
 // 3 ///////////////////////////////////////////////////////////////////////////
 echo '3) <br>';
