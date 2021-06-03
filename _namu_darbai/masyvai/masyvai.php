@@ -208,9 +208,17 @@ print_r($masyvas_8);
 
 echo '<br><hr>';
 // 9 ///////////////////////////////////////////////////////////////////////////
-echo '9) <br>';
+echo '9) <
+br>';
+$masyvas_9 = [];
 
-
+foreach ($masyvas6_1 as $key => $value) {
+    $masyvas_9[$key] = $value;
+}
+foreach ($masyvas6_2 as $key => $value) {
+    $masyvas_9[$value] = $value;
+}
+print_r($masyvas_9);
 
 echo '<br><hr>';
 // 10 ///////////////////////////////////////////////////////////////////////////
