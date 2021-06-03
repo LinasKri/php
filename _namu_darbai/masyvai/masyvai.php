@@ -60,6 +60,21 @@ for ($i=0; $i < 10 ; $i++) {
 }
 print_r($masyvas_d);
 
+echo'<br>f) <br>';//-----------------------------
+
+$masyvas_f1 = [];
+$masyvas_f2 = [];
+
+foreach ($masyvas_d as $key => $value) {
+    if ($key % 2 === 0) {
+        array_push($masyvas_f2, $value);
+    } else{
+        array_push($masyvas_f1, $value);
+    }
+}
+print_r($masyvas_f1);
+print_r($masyvas_f2);
+
 echo '<br><hr>';
 // 3 ///////////////////////////////////////////////////////////////////////////
 echo '3) <br>';
