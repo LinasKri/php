@@ -39,7 +39,11 @@ echo "Max reiksme: $biggest <br>";
 echo 'Index: '.array_search($biggest,$masyvas);
 echo'<br>c) <br>';
 
-
+$masyvas_c = [];
+foreach ($masyvas as $key => $value) {
+    array_push($masyvas_c,($value-$key));
+}
+print_r($masyvas_c) ;
 
 echo'<br>d) <br>';
 
