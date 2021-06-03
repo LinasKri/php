@@ -23,7 +23,7 @@ print_r($masyvas);
 echo '<br><hr>';
 // 2 ///////////////////////////////////////////////////////////////////////////
 echo '2) <br>';
-echo'a) <br>';//-----------------------------
+echo'a) <br>';//--------------a---------------
 foreach ($masyvas as $value) {
     if ($value >= 10) {
         $tenOrMore++;
@@ -32,7 +32,7 @@ foreach ($masyvas as $value) {
 echo "Elementai didesni uz 10: $tenOrMore <br>";
 
 
-echo'b) <br>';//-----------------------------
+echo'b) <br>';//---------------b--------------
 
 $max = 0;
 $indexes = []; 
@@ -60,7 +60,7 @@ print_r($indexes);
 // echo 'Index: '.array_search($biggest,$masyvas);
 
 
-echo'<br>c) <br>';//-----------------------------
+echo'<br>c) <br>';//--------------c---------------
 
 $sum = 0;
 foreach ($masyvas as $key => $value) {
@@ -71,23 +71,25 @@ foreach ($masyvas as $key => $value) {
 echo "Poriniu index'u suma: $sum";
 
 
-echo'<br>d) <br>';//-----------------------------
+echo'<br>d) <br>';//---------------d--------------
 
 $masyvas_d = [];
 foreach ($masyvas as $key => $value) {
-    array_push($masyvas_d,($value-$key));
+
+    // array_push($masyvas_d,($value-$key));
+    $masyvas_d[] = ($value-$key);
 }
 print_r($masyvas_d);
 
 
-echo'<br>e) <br>';//-----------------------------
+echo'<br>e) <br>';//-------------e----------------
 
 for ($i=0; $i < 10 ; $i++) { 
     array_push($masyvas_d, rand(5,25));
 }
 print_r($masyvas_d);
 
-echo'<br>f) <br>';//-----------------------------
+echo'<br>f) <br>';//--------------f---------------
 
 $masyvas_f1 = [];
 $masyvas_f2 = [];
@@ -102,15 +104,16 @@ foreach ($masyvas_d as $key => $value) {
 print_r($masyvas_f1);
 print_r($masyvas_f2);
 
-echo'<br>g) <br>';//-----------------------------
+echo'<br>g) <br>';//-------------g----------------
 foreach ($masyvas_f2 as $key => &$value) {
     if ($value > 15) {
         $value = 0;
     }
 }
+unset($value);
 print_r($masyvas_f2);
 
-echo'<br>h) <br>';//-----------------------------
+echo'<br>h) <br>';//-------------h----------------
 foreach ($masyvas_f2 as $value) {
     if ($value > 10) {
         echo '['.array_search($value, $masyvas_f2).'] => '.$value.' <br>'; 
@@ -118,7 +121,7 @@ foreach ($masyvas_f2 as $value) {
     }
 }
 
-echo'<br>i) <br>';//-----------------------------
+echo'<br>i) <br>';//--------------i---------------
 
 foreach ($masyvas_f2 as $key => $value) {
     if ($key %2 == 0) {
