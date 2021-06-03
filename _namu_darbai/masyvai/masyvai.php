@@ -75,6 +75,14 @@ foreach ($masyvas_d as $key => $value) {
 print_r($masyvas_f1);
 print_r($masyvas_f2);
 
+echo'<br>g) <br>';//-----------------------------
+foreach ($masyvas_f2 as $key => &$value) {
+    if ($value > 15) {
+        $value = 0;
+    }
+}
+print_r($masyvas_f2);
+
 echo '<br><hr>';
 // 3 ///////////////////////////////////////////////////////////////////////////
 echo '3) <br>';
