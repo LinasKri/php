@@ -146,6 +146,7 @@ $bendras_arr = combine($masyvas1,$masyvas2,$masyvas3);
 
 print_r(array_count_values($bendras_arr));
 
+
 echo '<br><hr>';
 // 6 ///////////////////////////////////////////////////////////////////////////
 echo '6) <br>';
@@ -171,6 +172,13 @@ print_r($masyvas2).'<br>';
 echo '<br><hr>';
 // 7 ///////////////////////////////////////////////////////////////////////////
 echo '7) <br>';
+
+foreach ($masyvas1 as $value) {
+    if (!in_array($value, $masyvas2)) {
+        array_push($masyvas2, $value);
+    } 
+}
+print_r($masyvas2);
 
 
 
