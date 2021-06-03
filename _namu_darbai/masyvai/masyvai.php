@@ -146,12 +146,27 @@ $bendras_arr = combine($masyvas1,$masyvas2,$masyvas3);
 
 print_r(array_count_values($bendras_arr));
 
-
 echo '<br><hr>';
 // 6 ///////////////////////////////////////////////////////////////////////////
 echo '6) <br>';
 
+$masyvas1 =[];
+$masyvas2 =[];
 
+function addUnique($array){
+    $num = rand(100,999);
+    if (!in_array($num, $array)) {
+        return $num;
+    } else {
+        return addUnique($array);
+    }
+}
+for ($i=0; $i < 100 ; $i++) { 
+    $masyvas1[$i] = addUnique($masyvas1);
+    $masyvas2[$i] = addUnique($masyvas2);
+}
+print_r($masyvas1).'<br>';
+print_r($masyvas2).'<br>';
 
 echo '<br><hr>';
 // 7 ///////////////////////////////////////////////////////////////////////////
