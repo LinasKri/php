@@ -173,12 +173,18 @@ echo '<br><hr>';
 // 7 ///////////////////////////////////////////////////////////////////////////
 echo '7) <br>';
 
+$masyvas3 = [];
 foreach ($masyvas1 as $value) {
     if (!in_array($value, $masyvas2)) {
-        array_push($masyvas2, $value);
+        array_push($masyvas3, $value);
     } 
 }
-print_r($masyvas2);
+foreach ($masyvas2 as $value) {
+    if (!in_array($value, $masyvas1)) {
+        array_push($masyvas3, $value);
+    } 
+}
+print_r($masyvas3);
 
 
 
