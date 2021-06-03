@@ -28,6 +28,7 @@ foreach ($masyvas as $key => $value) {
 echo "Elementai didesni uz 10: $tenOrMore <br>";
 
 echo'b) <br>';//-----------------------------
+$biggest = 0;
 foreach ($masyvas as $key => $value) {
 
     if($value > $biggest){
