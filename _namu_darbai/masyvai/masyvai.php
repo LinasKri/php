@@ -105,10 +105,7 @@ echo '<br><hr>';
 echo '3) <br>';
 
 $jungleIsMassive = [];
-$a = 0;
-$b = 0;
-$C = 0;
-$d = 0;
+
 for ($i=0; $i < 200 ; $i++) { 
     array_push($jungleIsMassive,chr(rand(65,68)));
 }
@@ -126,7 +123,28 @@ print_r($jungleIsMassive);
 echo '<br><hr>';
 // 5 ///////////////////////////////////////////////////////////////////////////
 echo '5) <br>';
+$masyvas1 = [];
+$masyvas2 = [];
+$masyvas3 = [];
 
+
+for ($i=0; $i < 200 ; $i++) { 
+    array_push($masyvas1,chr(rand(65,68)));
+    array_push($masyvas2,chr(rand(65,68)));
+    array_push($masyvas3,chr(rand(65,68)));
+}
+
+function combine($array1, $array2, $array3){
+    $combined_Array = [];
+
+    foreach ($array1 as $key => $value) {
+        $combined_Array[$key] = $value.$array2[$key].$array3[$key];
+    }
+    return $combined_Array;
+}
+$bendras_arr = combine($masyvas1,$masyvas2,$masyvas3);
+
+print_r(array_count_values($bendras_arr));
 
 
 echo '<br><hr>';
