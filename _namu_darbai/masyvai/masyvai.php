@@ -151,8 +151,8 @@ echo '<br><hr>';
 // 6 ///////////////////////////////////////////////////////////////////////////
 echo '6) <br>';
 
-$masyvas1 =[];
-$masyvas2 =[];
+$masyvas6_1 =[];
+$masyvas6_2 =[];
 
 function addUnique($array){
     $num = rand(100,999);
@@ -163,35 +163,47 @@ function addUnique($array){
     }
 }
 for ($i=0; $i < 100 ; $i++) { 
-    $masyvas1[$i] = addUnique($masyvas1);
-    $masyvas2[$i] = addUnique($masyvas2);
+    $masyvas6_1[$i] = addUnique($masyvas6_1);
+    $masyvas6_2[$i] = addUnique($masyvas6_2);
 }
-print_r($masyvas1).'<br>';
-print_r($masyvas2).'<br>';
+print_r($masyvas6_1).'<br>';
+print_r($masyvas6_2).'<br>';
 
 echo '<br><hr>';
 // 7 ///////////////////////////////////////////////////////////////////////////
 echo '7) <br>';
 
-$masyvas3 = [];
-foreach ($masyvas1 as $value) {
-    if (!in_array($value, $masyvas2)) {
-        array_push($masyvas3, $value);
+$masyvas_7 = [];
+foreach ($masyvas6_1 as $value) {
+    if (!in_array($value, $masyvas6_2)) {
+        array_push($masyvas_7, $value);
     } 
 }
-foreach ($masyvas2 as $value) {
-    if (!in_array($value, $masyvas1)) {
-        array_push($masyvas3, $value);
+foreach ($masyvas6_2 as $value) {
+    if (!in_array($value, $masyvas6_1)) {
+        array_push($masyvas_7, $value);
     } 
 }
-print_r($masyvas3);
-
+print_r($masyvas_7);
 
 
 echo '<br><hr>';
 // 8 ///////////////////////////////////////////////////////////////////////////
 echo '8) <br>';
 
+$masyvas_8 = [];
+
+foreach ($masyvas6_1 as $value) {
+    if (in_array($value, $masyvas6_2)) {
+        array_push($masyvas_8, $value);
+    } 
+}
+foreach ($masyvas6_2 as $value) {
+    if (in_array($value, $masyvas6_1)) {
+        array_push($masyvas_8, $value);
+    } 
+}
+print_r($masyvas_8);
 
 
 echo '<br><hr>';
