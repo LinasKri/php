@@ -5,10 +5,13 @@
 echo '1) <br>';
 
 $masyvas = [];
+$tenOrMore = 0;
+$size = 30;
 
-for ($i=0; $i < 30; $i++) { 
-    array_push($masyvas, rand(5,25));
+for ($i = 0; $i < $size; $i++) { 
+    $masyvas[] = rand(5,25);
 }
+
 echo'<pre>';
 print_r($masyvas);
 
@@ -16,7 +19,25 @@ print_r($masyvas);
 echo '<br><hr>';
 // 2 ///////////////////////////////////////////////////////////////////////////
 echo '2) <br>';
+echo'a) <br>';
+foreach ($masyvas as $key => $value) {
+    if ($masyvas[$value] > 10) {
+        $tenOrMore++;
+    }
+}
+echo "Elementai didesni uz 10: $tenOrMore <br>";
 
+echo'b) <br>';
+$biggest = 0;
+foreach ($masyvas as $key => $value) {
+
+    if($masyvas[$value] > $masyvas[$biggest]){
+        $masyvas[$biggest] =  $masyvas[$value];
+    }
+}
+print_r("Didziausias elementas: $masyvas[$key] $masyvas[$biggest]");
+
+echo'<br>c) <br>';
 
 
 echo '<br><hr>';
