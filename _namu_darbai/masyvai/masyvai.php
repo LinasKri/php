@@ -21,7 +21,7 @@ echo '<br><hr>';
 echo '2) <br>';
 echo'a) <br>';
 foreach ($masyvas as $key => $value) {
-    if ($masyvas[$value] > 10) {
+    if ($value >= 10) {
         $tenOrMore++;
     }
 }
@@ -31,13 +31,17 @@ echo'b) <br>';
 $biggest = 0;
 foreach ($masyvas as $key => $value) {
 
-    if($masyvas[$value] > $masyvas[$biggest]){
-        $masyvas[$biggest] =  $masyvas[$value];
+    if($value > $biggest){
+        $biggest =  $value;
     }
 }
-print_r("Didziausias elementas: $masyvas[$key] $masyvas[$biggest]");
-
+echo "Max reiksme: $biggest <br>";
+echo 'Index: '.array_search($biggest,$masyvas);
 echo'<br>c) <br>';
+
+
+
+echo'<br>d) <br>';
 
 
 echo '<br><hr>';
