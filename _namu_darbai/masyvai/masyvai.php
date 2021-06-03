@@ -104,6 +104,16 @@ echo '<br><hr>';
 // 3 ///////////////////////////////////////////////////////////////////////////
 echo '3) <br>';
 
+$jungleIsMassive = [];
+$a = 0;
+$b = 0;
+$C = 0;
+$d = 0;
+for ($i=0; $i < 200 ; $i++) { 
+    array_push($jungleIsMassive,chr(rand(65,68)));
+}
+print_r($jungleIsMassive);
+print_r(array_count_values($jungleIsMassive));
 
 
 echo '<br><hr>';
