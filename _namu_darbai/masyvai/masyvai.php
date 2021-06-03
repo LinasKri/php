@@ -19,7 +19,7 @@ print_r($masyvas);
 echo '<br><hr>';
 // 2 ///////////////////////////////////////////////////////////////////////////
 echo '2) <br>';
-echo'a) <br>';
+echo'a) <br>';//-----------------------------
 foreach ($masyvas as $key => $value) {
     if ($value >= 10) {
         $tenOrMore++;
@@ -27,8 +27,7 @@ foreach ($masyvas as $key => $value) {
 }
 echo "Elementai didesni uz 10: $tenOrMore <br>";
 
-echo'b) <br>';
-$biggest = 0;
+echo'b) <br>';//-----------------------------
 foreach ($masyvas as $key => $value) {
 
     if($value > $biggest){
@@ -37,16 +36,28 @@ foreach ($masyvas as $key => $value) {
 }
 echo "Max reiksme: $biggest <br>";
 echo 'Index: '.array_search($biggest,$masyvas);
-echo'<br>c) <br>';
 
-$masyvas_c = [];
+echo'<br>c) <br>';//-----------------------------
+$sum = 0;
 foreach ($masyvas as $key => $value) {
-    array_push($masyvas_c,($value-$key));
+    if ($key % 2 === 0) {
+        $sum += $value;
+    }
 }
-print_r($masyvas_c) ;
+echo "Poriniu index'u suna: $sum";
 
-echo'<br>d) <br>';
+echo'<br>d) <br>';//-----------------------------
+$masyvas_d = [];
+foreach ($masyvas as $key => $value) {
+    array_push($masyvas_d,($value-$key));
+}
+print_r($masyvas_d);
 
+echo'<br>e) <br>';//-----------------------------
+for ($i=0; $i < 10 ; $i++) { 
+    array_push($masyvas_d, rand(5,25));
+}
+print_r($masyvas_d);
 
 echo '<br><hr>';
 // 3 ///////////////////////////////////////////////////////////////////////////
