@@ -247,6 +247,27 @@ echo '<br><hr>';
 // 10 ///////////////////////////////////////////////////////////////////////////
 echo '10) <br>';
 
+$masyvas_10 = [];
+
+
+$num1 = rand(5,25);
+$num2 = rand(5,25);
+
+echo "$num1 $num2 <br>";
+
+
+$masyvas_10 []= $num1;
+$masyvas_10 []= $num2;
+
+for ($i=0; $i < 8; $i++) { 
+
+    $num3 = $num1 + $num2;
+    $masyvas_10 []= $num3;
+
+    $num1 = $num2;
+    $num2 = $num3;
+}
+print_r($masyvas_10);
 
 
 echo '<br><hr>';
