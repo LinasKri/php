@@ -130,3 +130,18 @@ do {
 
 
 echo '<br>'; echo'<br>c) <br>';//--------------c---------------
+
+$seka = '';
+
+do {
+    $metimas = rand(0,1);
+    
+    if($metimas === 0){
+        echo 'H';
+        $seka.='H';
+    } else {
+        echo 'S';
+        $seka.='S';
+    }
+} while (strpos($seka, 'HHH') === false);
+
