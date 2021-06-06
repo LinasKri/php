@@ -240,16 +240,7 @@ echo '<br><hr>';
 // 9 ///////////////////////////////////////////////////////////////////////////
 echo '9) <br>';
 
-$masyvas_9 = [];
-
-foreach ($masyvas6_1 as $key => $value) {
-    $masyvas_9[$key] = $value;
-}
-
-foreach ($masyvas6_2 as $key => $value) {
-    array_push($masyvas_9,$value);
-}
-
+$masyvas_9 = array_combine($masyvas6_1, $masyvas6_2);
 print_r($masyvas_9);
 
 echo '<br><hr>';
