@@ -98,17 +98,19 @@ echo '</div>';
 echo '<br><hr>';
 // 6 /////////////////////////////////////////////////////////// [Nebaigta] ////////////////
 echo '6) <br><br>';
+echo'a) <br>';//--------------a---------------
 
-$monetosPuse = '';
+$herbas = false;
 
 do {
     $metimas = rand(0,1);
     
-    if ($metimas === 0) {
-        $monetosPuse.='H';
-    }elseif($metimas === 1){
-        $monetosPuse.='S';
+    if($metimas == 0){
+        echo 'H';
+        $herbas = true;
+    } else {
+        echo 'S';
     }
-} while (!$monetosPuse == '/[HHH]/');
+} while (!$herbas);
 
-echo $monetosPuse;
+echo'a) <br>';//--------------a---------------
