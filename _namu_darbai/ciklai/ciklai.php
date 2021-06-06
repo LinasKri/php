@@ -93,3 +93,22 @@ for($i=0; $i <= $side; $i++) {
 
 }
 echo '</div>';
+
+
+echo '<br><hr>';
+// 6 /////////////////////////////////////////////////////////// [Nebaigta] ////////////////
+echo '6) <br><br>';
+
+$monetosPuse = '';
+
+do {
+    $metimas = rand(0,1);
+    
+    if ($metimas === 0) {
+        $monetosPuse.='H';
+    }elseif($metimas === 1){
+        $monetosPuse.='S';
+    }
+} while (!$monetosPuse == '/[HHH]/');
+
+echo $monetosPuse;
