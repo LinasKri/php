@@ -75,13 +75,13 @@ for($i = 0; $i < $side; $i++) {
 
 echo '<br>';
 
-for($i=0; $i <= $side; $i++) {
-    for($j=0; $j <= $side; $j++) {
+for($i=0; $i <= $side-1; $i++) {
+    for($j=0; $j <= $side-1; $j++) {
 
         if ($i===$j) {
             echo "<font color='red'>*</font>";
 
-        } elseif ($i + $j === $side) {
+        } elseif ($i + $j +1 === $side ) {
             echo "<font color='red'>*</font>";
             
         } else {
@@ -105,7 +105,7 @@ $herbas = false;
 do {
     $metimas = rand(0,1);
     
-    if($metimas == 0){
+    if($metimas === 0){
         echo 'H';
         $herbas = true;
     } else {
@@ -113,4 +113,20 @@ do {
     }
 } while (!$herbas);
 
-echo'a) <br>';//--------------a---------------
+echo '<br>'; echo'<br>b) <br>';//--------------b---------------
+
+$herbuKiekis = 0;
+
+do {
+    $metimas = rand(0,1);
+    
+    if($metimas === 0){
+        echo 'H';
+        $herbuKiekis++;
+    } else {
+        echo 'S';
+    }
+} while ($herbuKiekis < 3);
+
+
+echo '<br>'; echo'<br>c) <br>';//--------------c---------------
