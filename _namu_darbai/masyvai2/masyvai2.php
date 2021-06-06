@@ -35,4 +35,16 @@ echo "vertes didesnes uz 10: $counter";
 
 echo'<br>b) <br>';//--------------b---------------
 
-print_r(max($masyvas));
+$max = 0;
+
+foreach ($masyvas as $value) {
+    foreach ($value as $smallValue) {
+        if ($smallValue > $max) {
+            $max = $smallValue;
+        }
+    }
+}
+echo $max;
+
+
+echo'<br>c) <br>';//--------------c---------------
