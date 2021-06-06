@@ -19,7 +19,7 @@ print_r($masyvas);
 echo '<br><hr>';
 // 2 ///////////////////////////////////////////////////////////////////////////
 echo '2) <br>';
-echo'a) <br>';//--------------a---------------
+echo'<br>';echo'a) <br>';//--------------a---------------
 
 $counter = 0;
 
@@ -33,7 +33,7 @@ foreach ($masyvas as $value) {
 echo "vertes didesnes uz 10: $counter";
 
 
-echo'<br>b) <br>';//--------------b---------------
+echo'<br>';echo'<br>b) <br>';//--------------b---------------
 
 $max = 0;
 
@@ -47,4 +47,9 @@ foreach ($masyvas as $value) {
 echo $max;
 
 
-echo'<br>c) <br>';//--------------c---------------
+echo'<br>';echo'<br>c) <br>';//--------------c---------------[NEBAIGTAS]
+foreach ($masyvas as $key => $value) {
+    
+    print_r(array_sum(array_column($masyvas,$key)));
+    echo'<br>';
+}
