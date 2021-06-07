@@ -47,9 +47,47 @@ foreach ($masyvas as $value) {
 echo $max;
 
 
-echo'<br>';echo'<br>c) <br>';//--------------c---------------[NEBAIGTAS]
-foreach ($masyvas as $key => $value) {
-    
-    print_r(array_sum(array_column($masyvas,$key)));
-    echo'<br>';
+echo'<br>';echo'<br>c) <br>';//--------------c---------------
+
+foreach ($masyvas as $value) {
+    foreach ($value as $key => $value2) {
+        match ($key) {
+            0 => $sum += $value2,
+            1 => $sum1 += $value2,
+            2 => $sum2 += $value2,
+            3 => $sum3 += $value2,
+            4 => $sum4 += $value2,
+        };
+    }
 }
+_d("$sum $sum1 $sum2 $sum3 $sum4", '2c');
+
+// $reiksmes = [];
+// $reiksme = 0;
+// foreach (range(1, 5) as $key => $value) {
+// foreach (range(1, 10) as $key2 => $value2) {
+// $reiksme += $masyvas[$key2][$key];
+// }
+// $reiksmes[] = $reiksme;
+// $reiksme = 0;
+// }
+// print_r($reiksmes);
+
+
+
+
+
+echo'<br>';echo'<br>d) <br>';//--------------d---------------
+
+foreach ($masyvas as $index_ii => &$value) {
+    $value[] =  rand(5, 25);
+    $value[] =  rand(5, 25);
+}
+
+// foreach ($masyvas as $key => $_) {
+//     $masyvas[$key][] = rand(5, 25);
+//     $masyvas[$key][] = rand(5, 25);
+// }
+// _d($masyvas, '2d');
+
+echo'<br>';echo'<br>e) <br>';//--------------e---------------

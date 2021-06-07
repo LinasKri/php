@@ -75,8 +75,8 @@ for($i = 0; $i < $side; $i++) {
 
 echo '<br>';
 
-for($i=0; $i <= $side-1; $i++) {
-    for($j=0; $j <= $side-1; $j++) {
+for($i=0; $i < $side; $i++) {
+    for($j=0; $j < $side; $j++) {
 
         if ($i===$j) {
             echo "<font color='red'>*</font>";
