@@ -26,12 +26,32 @@ echo '<br><hr>';echo '3) <br>';
 $str =  md5(time());
 echo $str.'<br>';
 
-$int = filter_var($str, FILTER_SANITIZE_NUMBER_INT);
+$num = filter_var($str, FILTER_SANITIZE_NUMBER_INT);
 
-echo insertToH1($int);
-
-
+echo insertToH1($num);
 
 
+// 4 ///////////////////////////////////////////////////////////////////////////
+echo '<br><hr>';echo '4) <br>';
 
+
+function beLiekanos($num){
+    $kiek = 0;
+    $daliklis = 2;
+
+    if (is_int($num) === true) {
+        while ($num > $daliklis) {
+            if ($num % $daliklis === 0) {
+            $kiek++;
+            }
+            $daliklis++;
+        }
+        return $kiek;
+    } else {
+        return 'Only whole numbers can be used!';
+    }
+}
+$num = rand(9,100);
+echo "$num<br>";
+echo beLiekanos($num);
 
