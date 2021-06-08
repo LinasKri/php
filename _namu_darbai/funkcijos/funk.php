@@ -78,3 +78,15 @@ print_r(array_reverse($masyvas));
 echo '<br><hr>';echo '6) <br>';
 echo '<pre>';
 
+$masyvas = [];
+$pirminiai = [];
+for ($i=0; $i < 100; $i++) { 
+    $masyvas[] = rand(333, 777);
+}
+
+foreach ($masyvas as $key => $value) {
+    if (beLiekanos($value) === 0 ) {
+        $pirminiai [] = $value;
+    }
+}
+print_r($pirminiai);
