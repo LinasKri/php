@@ -73,6 +73,8 @@ usort($masyvas, function($a, $b) {
 
 print_r(array_reverse($masyvas)); 
 
+
 // 6 ///////////////////////////////////////////////////////////////////////////
 echo '<br><hr>';echo '6) <br>';
 echo '<pre>';
+
