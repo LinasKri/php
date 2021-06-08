@@ -27,7 +27,8 @@ $str =  md5(time());
 echo $str.'<br>';
 
 $int = filter_var($str, FILTER_SANITIZE_NUMBER_INT);
-insertToH1($int);
+
+echo insertToH1($int);
 
 
 
