@@ -48,10 +48,26 @@ function beLiekanos($num){
         }
         return $kiek;
     } else {
-        return 'Only whole numbers can be used!';
+        return 'Naudoti tik sveikus skaicius!';
     }
 }
 $num = rand(9,100);
 echo "$num<br>";
 echo beLiekanos($num);
 
+// 5 ///////////////////////////////////////////////////////////////////////////
+echo '<br><hr>';echo '5) <br>';
+
+$masyvas = [];
+
+for ($i=0; $i < 100; $i++) { 
+    $masyvas[]= rand(33, 77);
+}
+echo '<pre>';
+print_r($masyvas);
+
+foreach ($masyvas as $value) {
+    if(beLiekanos($value)>){
+
+    }
+}
