@@ -55,19 +55,24 @@ $num = rand(9,100);
 echo "$num<br>";
 echo beLiekanos($num);
 
+
 // 5 ///////////////////////////////////////////////////////////////////////////
 echo '<br><hr>';echo '5) <br>';
+echo '<pre>';
 
 $masyvas = [];
 
 for ($i=0; $i < 100; $i++) { 
-    $masyvas[]= rand(33, 77);
+    $masyvas[] = rand(33, 77);
 }
+print_r($masyvas).'<br>';
+
+usort($masyvas, function($a, $b) {
+    return beLiekanos($a) <=> beLiekanos($b);
+});
+
+print_r(array_reverse($masyvas)); 
+
+// 6 ///////////////////////////////////////////////////////////////////////////
+echo '<br><hr>';echo '6) <br>';
 echo '<pre>';
-print_r($masyvas);
-
-foreach ($masyvas as $value) {
-    if(beLiekanos($value)>){
-
-    }
-}
