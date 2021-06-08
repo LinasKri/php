@@ -27,10 +27,10 @@ $str =  md5(time());
 echo $str.'<br>';
 
 $int = filter_var($str, FILTER_SANITIZE_NUMBER_INT);
-echo "<h1>$int</h1>";
+insertToH1($int);
 
-$pattern = '/[0-9]/';
-$result = preg_replace_callback($pattern, 'insertToH1', $int);
+
+
 
 
 
