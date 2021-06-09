@@ -1,95 +1,97 @@
 <body style="background-color:mediumseagreen ;"></body>
 
 <?php
-// // 1 ///////////////////////////////////////////////////////////////////////////
-// echo '1) <br>';
+// 1 ///////////////////////////////////////////////////////////////////////////
+echo '1) <br>';
 
-// function insertToH1($string){
-//     return "<h1> $string </h1>";
-// }
+function insertToH1(string|array $text) : string {
+    if (is_array($text)) {
+        $text = $text[0];
+    }
+    return "<h1 style = \"display:inline;\"> $text </h1>";
+}
 
-// echo insertToH1('labas');
-
-
-// // 2 ///////////////////////////////////////////////////////////////////////////
-// echo '<br><hr>';echo '2) <br>';
-
-// function makeATag($string, $int){
-//     return "<h$int> $string </h$int>";
-// }
-// echo makeATag('Ate', rand(1,6));
+echo insertToH1('labas');
 
 
-// // 3 ///////////////////////////////////////////////////////////////////////////
-// echo '<br><hr>';echo '3) <br>';
+// 2 ///////////////////////////////////////////////////////////////////////////
+echo '<br><hr>';echo '2) <br>';
 
-// $str =  md5(time());
-// echo $str.'<br>';
-
-// $num = filter_var($str, FILTER_SANITIZE_NUMBER_INT);
-
-// echo insertToH1($num);
+function makeATag($string, $int){
+    return "<h$int> $string </h$int>";
+}
+echo makeATag('Ate', rand(1,6));
 
 
-// // 4 ///////////////////////////////////////////////////////////////////////////
-// echo '<br><hr>';echo '4) <br>';
+// 3 ///////////////////////////////////////////////////////////////////////////
+echo '<br><hr>';echo '3) <br>';
+
+$str =  md5(time());
+echo $str.'<br>';
+
+$num = preg_replace_callback('/\d+/', 'insertToH1', $str);
+
+echo insertToH1($num);
 
 
-// function beLiekanos($num){
-//     $kiek = 0;
-//     $daliklis = 2;
-
-//     if (is_int($num) === true) {
-//         while ($num > $daliklis) {
-//             if ($num % $daliklis === 0) {
-//             $kiek++;
-//             }
-//             $daliklis++;
-//         }
-//         return $kiek;
-//     } else {
-//         return 'Naudoti tik sveikus skaicius!';
-//     }
-// }
-// $num = rand(9,100);
-// echo "$num<br>";
-// echo beLiekanos($num);
+// 4 ///////////////////////////////////////////////////////////////////////////
+echo '<br><hr>';echo '4) <br>';
 
 
-// // 5 ///////////////////////////////////////////////////////////////////////////
-// echo '<br><hr>';echo '5) <br>';
-// echo '<pre>';
+function beLiekanos(int $num) : int {
+    $kiek = 0;
+    $daliklis = 2;
 
-// $masyvas = [];
-
-// for ($i=0; $i < 100; $i++) { 
-//     $masyvas[] = rand(33, 77);
-// }
-// print_r($masyvas).'<br>';
-
-// usort($masyvas, function($a, $b) {
-//     return beLiekanos($a) <=> beLiekanos($b);
-// });
-
-// print_r(array_reverse($masyvas)); 
-
-
-// // 6 ///////////////////////////////////////////////////////////////////////////
-// echo '<br><hr>';echo '6) <br>';
+        while ($num > $daliklis) {
+            if ($num % $daliklis === 0) {
+            $kiek++;
+            }
+            $daliklis++;
+        }
+        return $kiek;
+}
+$num = rand(9,100);
+echo "$num<br>";
+echo beLiekanos($num);
 
 
-// $masyvas = [];
-// $pirminiai = [];
-// for ($i=0; $i < 100; $i++) { 
-//     $masyvas[] = rand(333, 777);
-// }
+// 5 ///////////////////////////////////////////////////////////////////////////
+echo '<br><hr>';echo '5) <br>';
+echo '<pre>';
 
-// foreach ($masyvas as $key => $value) {
-//     if (beLiekanos($value) === 0 ) {
-//         $pirminiai [] = $value;
-//     }
-// }
-// print_r($pirminiai);
+$masyvas = [];
+
+foreach (range(1, 100) as $_) {
+    $masyvas[] = rand(33, 77);
+}
+
+print_r($masyvas).'<br>';
+
+usort($masyvas, function($a, $b) {
+
+    return beLiekanos($a) <=> beLiekanos($b);
+});
+
+print_r(array_reverse($masyvas)); 
+
+
+// 6 ///////////////////////////////////////////////////////////////////////////
+echo '<br><hr>';echo '6) <br>';
+
+
+$masyvas = [];
+$pirminiai = [];
+
+for ($i=0; $i < 100; $i++) { 
+    $masyvas[] = rand(333, 777);
+}
+
+foreach ($masyvas as $key => $value) {
+    if (beLiekanos($value) === 0 ) {
+        $pirminiai [] = $value;
+    }
+}
+print_r($pirminiai);
 
 
 // 7 ///////////////////////////////////////////////////////////////////////////
@@ -97,38 +99,60 @@ echo '<br><hr>';echo '7) <br>';
 echo '<pre>';
 
 
-
-for ($i=0; $i < rand(10, 30) ; $i++) { 
-    
-    $arr_size = rand(10,20);
-    // echo $arr_size.'<br>';
-    
-    for ($i=0; $i < $arr_size - 1; $i++) { 
+function gen_array($count)
+{   
+    $length = rand(10, 20);
+    foreach (range(1, $length - 1) as $_) {
         $masyvas[] = rand(0, 10);
     }
-    $last = rand(10,20);
-    
-    for ($i=0; $i < $last - 1; $i++) { 
-        $masyvas2[]= rand(0, 10);
+    $masyvas[] = 0;
+    if ($count > 0) {
+        $masyvas[$length - 1] = gen_array(--$count);
     }
-    $masyvas[] = $masyvas2;
-
+    return $masyvas;
 }
+$masyvas = gen_array(30);
+_dc($masyvas);
 
 
-$masyvas[count($masyvas) - 1][$masyvas2[count($masyvas2) - 1]] = array_push($masyvas2, 0);
-print_r($masyvas);
+// function generate($r) {
 
+//     static $i = 1;
 
+//     if ($i <= $r) {
+//         $z = rand(10, 20);
+//         foreach (range(1, $z) as $key => $_) {
+//             if ($key == ($z - 1) && $i == $r) {
+//                 $arr[] = 0;
+//             } elseif ($key == ($z - 1) && $i != $r) {
+//                 $i++;
+//                 $arr[] = generate($r);
+//             } else {
+//                 $arr[] = rand(0, 10);
+//             }
+//         }
+//         return $arr;
+//     }
+// }
 
-// $masyvas[] = $last;
-
-// $masyvas[$arr_size][$last] = 0;
-
-// print_r($masyvas);
 
 // 8 ///////////////////////////////////////////////////////////////////////////
 echo '<br><hr>';echo '8) <br>';
+
+function calc($masyvas) {
+    $sum = 0;
+
+    foreach($masyvas as $key => $value) {
+        if(is_array($value)) {
+            calc($value);
+        } else {
+            $sum += $value;
+        }
+    }
+    return $sum;
+} 
+
+print_r(calc($masyvas));
 
 
 
@@ -136,9 +160,17 @@ echo '<br><hr>';echo '8) <br>';
 echo '<br><hr>';echo '9) <br>';
 
 
-// 10 ///////////////////////////////////////////////////////////////////////////
+// 10 //////////////////////////////////////////////////////////////////////////
 echo '<br><hr>';echo '10) <br>';
 
+// $masyvas = [];
 
-// 11 ///////////////////////////////////////////////////////////////////////////
+// foreach (range(1,10) as $key => $value) {
+//     foreach ($value as $value2) {
+//         $masyvas[] = gen_array();
+//     }
+// }
+// print_r($masyvas);
+
+// 11 //////////////////////////////////////////////////////////////////////////
 echo '<br><hr>';echo '11) <br>';
