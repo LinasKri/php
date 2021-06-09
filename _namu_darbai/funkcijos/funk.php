@@ -143,10 +143,10 @@ function calc($masyvas) {
     $sum = 0;
 
     foreach($masyvas as $key => $value) {
-        if(is_array($value)) {
-            calc($value);
-        } else {
+        if(!is_array($value)) {
             $sum += $value;
+        } else {
+            $sum += calc($value);
         }
     }
     return $sum;
@@ -174,3 +174,6 @@ echo '<br><hr>';echo '10) <br>';
 
 // 11 //////////////////////////////////////////////////////////////////////////
 echo '<br><hr>';echo '11) <br>';
+
+
+  
