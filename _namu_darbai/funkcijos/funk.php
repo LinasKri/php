@@ -99,8 +99,7 @@ echo '<br><hr>';echo '7) <br>';
 echo '<pre>';
 
 
-function gen_array($count)
-{   
+function gen_array($count){   
     $length = rand(10, 20);
     foreach (range(1, $length - 1) as $_) {
         $masyvas[] = rand(0, 10);
