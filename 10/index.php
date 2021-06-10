@@ -52,11 +52,6 @@ if (isset($_GET['rodyti'])) {
     }
     echo 'Sveiki atvyke i musu puslapi!';
 }
-if (isset($_GET["Intager"])) {
-    if ($_GET['X'] === "Intager" && $_GET['Y'] === "Intager") {
-        echo 'X'+'Y';
-    }
-}
 
 
 ?>
