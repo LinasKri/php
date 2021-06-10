@@ -57,9 +57,7 @@ if (isset($_GET["Intager"])) {
         echo 'X'+'Y';
     }
 }
-function sum($x,$y){
-    return $x + $y;
-}
+
 
 ?>
 <form style="margin: 30px;" action="http://localhost/_php_/10/" method="get">
