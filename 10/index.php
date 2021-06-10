@@ -52,8 +52,14 @@ if (isset($_GET['rodyti'])) {
     }
     echo 'Sveiki atvyke i musu puslapi!';
 }
-
-
+if (isset($_GET["Intager"])) {
+    if ($_GET['X'] === "Intager" && $_GET['Y'] === "Intager") {
+        echo 'X'+'Y';
+    }
+}
+function sum($x,$y){
+    return $x + $y;
+}
 
 ?>
 <form style="margin: 30px;" action="http://localhost/_php_/10/" method="get">
