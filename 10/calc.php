@@ -18,7 +18,7 @@ Y: <input type="text" name="y"><br>
 <?php
 
 if (!empty($_GET)) {
-    echo '<h3 style="color:blue;"> '.( $_GET['x']+$_GET['y']).'</h3>'?? 0;
+    echo '<h3 style="color:blue;"> '.( $_GET['x']+$_GET['y']).'</h3>';
 }else{
     echo 'reikia dvieju skaiciu';
 }
