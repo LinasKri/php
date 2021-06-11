@@ -1,11 +1,12 @@
+
 <?php
+
 _d($_GET);
 
 $color = 'black';
 if (isset($_GET['color'])) {
     $color = 'red';
 }
-
 
 ?>
 
