@@ -1,3 +1,14 @@
+<?php
+
+_d($_GET);
+
+if (isset($_GET['color'])) {
+    $color = $_GET['color'];
+    echo '<body style="background-color: #'.($_GET['color']).';"></body>';
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,8 +17,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>02</title>
 </head>
-<body>
-    <a href="./">Link1</a>
-    <a href="&color=ff1234">Link2</a>
+<body style="background-color: <?=$color?>;">
+    <a href="./index.php">Link1</a>
+    <a href="./index.php?color=ff1234">Link2</a>
 </body>
 </html>
