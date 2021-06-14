@@ -1,4 +1,4 @@
-><?php
+<?php
 
 
 setcookie('Barsukas', 'Geras gyvuniukas');
