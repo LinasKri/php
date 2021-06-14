@@ -2,8 +2,10 @@
 <?php
 
 _d($_GET);
+
 $aColor = 'white';
 $color = 'black';
+
 if (isset($_GET['color'])) {
     $color = 'red';
     $aColor = 'yellow';

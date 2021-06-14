@@ -6,9 +6,9 @@ _d($_SERVER['REQUEST_METHOD']);
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $color = 'green';
 }elseif ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $color = 'yellow';
     header('Location: ./index.php');
     die;
+    $color = 'yellow';
 }
 
 ?>
