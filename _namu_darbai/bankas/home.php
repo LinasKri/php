@@ -6,18 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bank</title>
 </head>
-<body>
-    <?php include __DIR__.'/menu.php' ?>
-    <ul>
-        <?php foreach ($accounts as $account) : ?>
-            <li>Account No. [<?= $account['id'] ?>] Account balance: <?= $account['funds'] ?>
-            [<a href="?action=add&id=<?= $account['id'] ?>">Add</a>]
-            [<a href="?action=rem&id=<?= $account['id'] ?>">Remove</a>]
-            <form action="?action=delete&id=<?= $account['id'] ?>" method="post">
-            <button type="submit">Delete acc</button>
-            </form>
-            </li>
-        <?php endforeach ?>
-    </ul>
+<body style="background-color: green;">
+    <div style="background-color:coral;">
+        <ul>
+            <?php foreach ($accounts as $account) : ?>
+                <li>Account holder: <?=ucfirst($account['name']), ' ' , ucfirst($account['surname']), ', NIN: ' ,$account['IDCode']?><br> Account No. [<?= $account['id'] ?>] Account balance: <?= $account['funds'] ?>
+                    [<a href="?action=add&id=<?= $account['id'] ?>">Add</a>]
+                    [<a href="?action=rem&id=<?= $account['id'] ?>">Remove</a>]
+                    <form action="?action=delete&id=<?= $account['id'] ?>" method="post">
+                    <button type="submit">Delete acc</button>
+                    </form>
+                </li>
+            <?php endforeach ?>
+        </ul>
+        <div>
+        <?php include __DIR__.'/menu.php' ?>
+        </div>
+    </div>   
 </body>
 </html>
