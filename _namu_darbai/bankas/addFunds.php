@@ -14,7 +14,8 @@
 </head>
 <body>
     <?php include __DIR__.'/menu.php' ?>
-    <form action="?action=add" method="post">
+    <?php $id = $_GET['id'] ?? 0; ?>
+    <form action="?action=add&id=<?=$id?>" method="post">
         <input type="text" name="funds">
         <button>Add funds</button>
     </form>

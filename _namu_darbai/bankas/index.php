@@ -24,7 +24,7 @@ elseif ($_GET['action'] == 'add' && $_SERVER['REQUEST_METHOD'] == 'GET'){
 }
 
 // 3. Pinigu pridejimo vykdymas POST
-elseif ($_GET['action'] == 'add' && $_SERVER['REQUEST_METHOD'] == 'GET'){
+elseif ($_GET['action'] == 'add' && $_SERVER['REQUEST_METHOD'] == 'POST'){
     require __DIR__.'/doAddFunds.php';
 }
 
