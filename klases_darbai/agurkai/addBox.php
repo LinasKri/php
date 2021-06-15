@@ -13,7 +13,7 @@
 <body>
     <?php include __DIR__.'/menu.php';?>
 
-    <form action="?action=addBox" method="post">
+    <form action="?action=add-box" method="post">
     <button>Prideti nauja deze</button>
     </form>
 </body>

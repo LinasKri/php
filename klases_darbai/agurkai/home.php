@@ -11,10 +11,14 @@
     <title>Agurku gamykla</title>
 </head>
 <body>
-    <?php include __DIR__.'/menu.php';?>
+    <?php include __DIR__.'/menu.php'?>
 
-    <form action="?action=addBox" method="post">
-    <button>Prideti nauja deze</button>
-    </form>
+    <ul>
+        <?php foreach($boxes as $box) : ?>
+        <li> Dezes Nr. <?= $box['id'] ?>, Viso agurku  <?= $box['amount'] ?> 
+        [<a href="?action?=add&id=<?= $box['id'] ?>"></a>]
+        </li>
+        <?php endforeach ?>
+    </ul>
 </body>
 </html>
