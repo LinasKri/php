@@ -18,6 +18,7 @@
         <?php foreach ($accounts as $account) : ?>
             <li>Account No. [<?= $account['id'] ?>] Account balance: <?= $account['funds'] ?></li>
             [<a href="?action=add&id=<?= $account['id'] ?>">Add</a>]
+            [<a href="?action=rem&id=<?= $account['id'] ?>">Remove</a>]
         <?php endforeach ?>
     </ul>
 </body>

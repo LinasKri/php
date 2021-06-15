@@ -29,8 +29,14 @@ elseif ($_GET['action'] == 'add' && $_SERVER['REQUEST_METHOD'] == 'POST'){
 }
 
 // 4. Pinigu atemimo atvaizdavimas GET
+elseif ($_GET['action'] == 'rem' && $_SERVER['REQUEST_METHOD'] == 'GET'){
+    require __DIR__.'/removeFunds.php';
+}
 
 // 5. Pinigu atemimo vykdymas POST
+elseif ($_GET['action'] == 'rem' && $_SERVER['REQUEST_METHOD'] == 'POST'){
+    require __DIR__.'/doRemoveFunds.php';
+}
 
 // 6. Naujos saskaitos pridejimo atvaizdavimas GET
 elseif ($_GET['action'] == 'add-acc' && $_SERVER['REQUEST_METHOD'] == 'GET'){
