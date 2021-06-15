@@ -14,7 +14,10 @@
 </head>
 <body>
     <?php include __DIR__.'/menu.php' ?>
-
-    </form>
+    <ul>
+        <?php foreach ($accounts as $account) : ?>
+            <li>Account No. [<?= $account['id'] ?>] Account balance: <?= $account['funds'] ?></li>
+        <?php endforeach ?>
+    </ul>
 </body>
 </html>

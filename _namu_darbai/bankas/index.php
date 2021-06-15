@@ -1,5 +1,9 @@
 <?php
 session_start();
+function redirect(){
+    header('Location: http://localhost/_php_/_namu_darbai/bankas/');
+    die;
+}
 
 // acc ['id' => x, 'funds' => n ]
 
@@ -32,6 +36,9 @@ elseif($_GET['action'] == 'add-acc' && $_SERVER['REQUEST_METHOD'] == 'GET'){
 }
 
 // 7. Naujos saskaitos pridejimo vykdymas POST
+elseif($_GET['action'] == 'add-acc' && $_SERVER['REQUEST_METHOD'] == 'POST'){
+    require __DIR__.'/doAddAcc.php';
+}
 
 // 8. Saskaitos istrynimo vykdymas POST
 
