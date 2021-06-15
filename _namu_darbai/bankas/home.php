@@ -15,11 +15,11 @@
                     [<a href="?action=rem&id=<?= $account['id'] ?>">Remove</a>]
                     <form action="?action=delete&id=<?= $account['id'] ?>" method="post">
                     <button type="submit">Delete acc</button>
-                    </form>
+                    </form><br>
                 </li>
             <?php endforeach ?>
         </ul>
-        <div>
+        <div style="background-color: gold;">
         <?php include __DIR__.'/menu.php' ?>
         </div>
     </div>   
