@@ -16,9 +16,13 @@
     <?php include __DIR__.'/menu.php' ?>
     <ul>
         <?php foreach ($accounts as $account) : ?>
-            <li>Account No. [<?= $account['id'] ?>] Account balance: <?= $account['funds'] ?></li>
+            <li>Account No. [<?= $account['id'] ?>] Account balance: <?= $account['funds'] ?>
             [<a href="?action=add&id=<?= $account['id'] ?>">Add</a>]
             [<a href="?action=rem&id=<?= $account['id'] ?>">Remove</a>]
+            <form action="?action=delete&id=<?= $account['id'] ?>" method="post">
+            <button type="submit">Delete acc</button>
+            </form>
+            </li>
         <?php endforeach ?>
     </ul>
 </body>

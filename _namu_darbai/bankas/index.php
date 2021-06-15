@@ -49,6 +49,8 @@ elseif ($_GET['action'] == 'add-acc' && $_SERVER['REQUEST_METHOD'] == 'POST'){
 }
 
 // 8. Saskaitos istrynimo vykdymas POST
-
+elseif ($_GET['action'] == 'delete' && $_SERVER['REQUEST_METHOD'] == 'POST'){
+    require __DIR__.'/doRemoveAcc.php';
+}
 
 
