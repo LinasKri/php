@@ -7,8 +7,14 @@
     <title>Remove Funds</title>
 </head>
 <body>
-    <?php include __DIR__.'/menu.php' ?>
     <?php $id = $_GET['id'] ?? 0; ?>
+    <?php 
+    foreach ($accounts as $account) {
+        if ($account['id'] == $id) {
+            echo $account['name'], ' ' ,$account['surname'],'<br> Account balance: ', $account['funds'];
+        }
+    }
+    ?>
     <form action="?action=rem&id=<?=$id?>" method="post">
         <input type="text" name="funds">
         <button>Remove funds</button>
