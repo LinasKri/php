@@ -1,6 +1,11 @@
 <?php
 session_start();
 
+// jei nera .json failo, kuris laikytu saskaitas- sukurk
+if (!file_exists(__DIR__.'/accounts.json')) {
+    file_put_contents(__DIR__.'/accounts.json', json_encode([]));
+}
+
 // Saskaitu saraso atvaizdavimas GET
 
 // Pinigu pridejimo atvaizdavimas GET
