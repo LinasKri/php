@@ -9,27 +9,31 @@ if (!file_exists(__DIR__.'/accounts.json')) {
 }
 $accounts = json_decode(file_get_contents(__DIR__.'/accounts.json'), 1) ;
 
-// Saskaitu saraso atvaizdavimas GET
+// 1. Saskaitu saraso atvaizdavimas GET
+if(!isset($_GET['action']) && $_SERVER['REQUEST_METHOD'] == 'GET'){
+    require __DIR__.'/home.php';
+}
 
-// Pinigu pridejimo atvaizdavimas GET
-if($_GET['action'] == 'add' && $_SERVER['REQUEST_METHOD'] == 'GET'){
+
+// 2. Pinigu pridejimo atvaizdavimas GET
+elseif($_GET['action'] == 'add' && $_SERVER['REQUEST_METHOD'] == 'GET'){
     require __DIR__.'/add.php';
 }
 
-// Pinigu pridejimo vykdymas POST
+// 3. Pinigu pridejimo vykdymas POST
 
-// Pinigu atemimo atvaizdavimas GET
+// 4. Pinigu atemimo atvaizdavimas GET
 
-// Pinigu atemimo vykdymas POST
+// 5. Pinigu atemimo vykdymas POST
 
-// Naujos saskaitos pridejimo atvaizdavimas GET
-if($_GET['action'] == 'add-acc' && $_SERVER['REQUEST_METHOD'] == 'GET'){
+// 6. Naujos saskaitos pridejimo atvaizdavimas GET
+elseif($_GET['action'] == 'add-acc' && $_SERVER['REQUEST_METHOD'] == 'GET'){
     require __DIR__.'/addAcc.php';
 }
 
-// Naujos saskaitos pridejimo vykdymas POST
+// 7. Naujos saskaitos pridejimo vykdymas POST
 
-// Saskaitos istrynimo vykdymas POST
+// 8. Saskaitos istrynimo vykdymas POST
 
 
 
