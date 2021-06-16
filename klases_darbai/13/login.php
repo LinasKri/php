@@ -1,6 +1,13 @@
 <?php
 session_start();
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+    if(isset($_GET['logout'])){
+        // 2. Atjungia vartotoja
+        unset($_SESSION['logged'], $_SESSION['name']);
+        header('Location: http://localhost/_php_/klases_darbai/13/login.php');
+        die;
+
+    }
     // 1. Rodyti forma
 
 } else {
