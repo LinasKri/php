@@ -12,6 +12,11 @@
     </div>
     <div style="background-color: coral;">
         <ul>
+        <?php
+            usort($accounts, function($a, $b){
+                return $a['surname'] <=> $b['surname'];
+            });
+        ?>
             <?php foreach ($accounts as $account) : ?>
                 <li >Account holder: <?=ucfirst($account['name']), ' ' , ucfirst($account['surname']), ', AK: ' ,$account['IDCode']?><br> Account No. [<?= $account['id'] ?>]<br> Account balance: <?= $account['funds'] ?> €
                     [<a href="?action=add&id=<?= $account['id'] ?>">Add</a>]
