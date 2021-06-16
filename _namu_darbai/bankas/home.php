@@ -7,10 +7,13 @@
     <title>Bank</title>
 </head>
 <body style="background-color: green;">
-    <div style="background-color:coral;">
+    <div style="background-color: aquamarine;">
+        <?php include __DIR__.'/msg.php' ?>
+    </div>
+    <div style="background-color: coral;">
         <ul>
             <?php foreach ($accounts as $account) : ?>
-                <li>Account holder: <?=ucfirst($account['name']), ' ' , ucfirst($account['surname']), ', NIN: ' ,$account['IDCode']?><br> Account No. [<?= $account['id'] ?>] Account balance: <?= $account['funds'] ?>
+                <li aria-readonly="id">Account holder: <?=ucfirst($account['name']), ' ' , ucfirst($account['surname']), ', AK: ' ,$account['IDCode']?><br> Account No. [<?= $account['id'] ?>] Account balance: <?= $account['funds'] ?>
                     [<a href="?action=add&id=<?= $account['id'] ?>">Add</a>]
                     [<a href="?action=rem&id=<?= $account['id'] ?>">Remove</a>]
                     <form action="?action=delete&id=<?= $account['id'] ?>" method="post">

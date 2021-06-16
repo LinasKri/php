@@ -5,6 +5,19 @@ function redirect(){
     header('http://localhost/_php_/klases_darbai/agurkai/');
     die;
 }
+function getMessage(){
+    if(!isset($_SESSION['msg'])){
+        return false;
+    }
+    $msg = $_SESSION['msg'];
+    unset($_SESSION['msg']);
+    return $msg;
+}
+
+function setMessage(string $smg){
+    $_SESSION['msg'] = $msg;
+}
+
 
 // box ['id' => 25, 'amount' => 258]
 

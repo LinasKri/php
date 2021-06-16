@@ -4,6 +4,21 @@ function redirect(){
     header('Location: http://localhost/_php_/_namu_darbai/bankas/');
     die;
 }
+
+
+function getMessage(){
+    if(!isset($_SESSION['msg'])){
+        return false;
+    }
+    $msg = $_SESSION['msg'];
+    unset($_SESSION['msg']);
+    return $msg;
+}
+
+function setMessage(string $msg){
+    $_SESSION['msg'] = $msg;
+}
+
 // acc ['id' => x, 'funds' => n ]
 
 // jei nera .json failo, kuris laikytu saskaitas - sukurk
