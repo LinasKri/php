@@ -7,6 +7,7 @@
     <title>Remove Funds</title>
 </head>
 <body>
+    <?php include __DIR__.'/msg.php' ?> 
     <?php $id = $_GET['id'] ?? 0; ?>
     <?php 
     foreach ($accounts as $account) {

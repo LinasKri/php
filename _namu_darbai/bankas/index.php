@@ -5,6 +5,15 @@ function redirect(){
     die;
 }
 
+function redirectToAction($action, $id = 0){
+    if ($id) {
+        header('Location: http://localhost/_php_/_namu_darbai/bankas/?action='.$action.'&id='.$id);
+    } else {
+        header('Location: http://localhost/_php_/_namu_darbai/bankas/?action='.$action);
+    }
+    die;
+}
+
 
 function getMessage(){
     if(!isset($_SESSION['msg'])){
