@@ -1,4 +1,5 @@
 <?php
+session_start();
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     // 1. Rodyti forma
 
@@ -29,9 +30,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 <body>
     <?php include __DIR__.'/menu.php'?>
     <h1>Login</h1>
-    <form action="https://localhost/_php_/klases_darbai/13/login.php" method="post"></form>
-    <input type="text" name="name">
-    <input type="password" name="pass">
-    <button type="submit">Login</button>
+    <form action="https://localhost/_php_/klases_darbai/13/login.php" method="post">
+        <input type="text" name="name">
+        <input type="password" name="pass">
+        <button type="submit">Login</button>
+    </form>
 </body>
 </html>
