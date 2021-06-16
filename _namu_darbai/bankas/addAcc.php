@@ -9,10 +9,10 @@
 <body>
     <?php include __DIR__.'/menu.php' ?>
     <form action="?action=add-acc" method="post">
-    <input type="text" name="name" placeholder="Name">
-    <input type="text" name="surname" placeholder="Surname">
-    <input type="text" name="IDCode" placeholder="ID code">
-    <button>Add account</button>
+        <input type="text" name="name" placeholder="Name">
+        <input type="text" name="surname" placeholder="Surname">
+        <input type="text" name="IDCode" placeholder="ID code">
+        <button>Add account</button>
     </form>
 </body>
 </html>

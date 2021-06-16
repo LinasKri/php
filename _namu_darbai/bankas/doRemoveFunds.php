@@ -10,10 +10,10 @@ foreach ($accounts as &$account) {
 
             $account['funds'] -= (int) $_POST['funds'];
             file_put_contents(__DIR__.'/accounts.json', json_encode($accounts));
-            setMessage('Pinigai nuskaiciuoti');
+            setMessage('Pinigai nuskaiciuoti: '. $_POST['funds'].' €');
             redirect();
         }else{
-            echo 'insufficient funds!!! Please go back :)';
+            echo 'Insufficient funds !!! Please go back :)';
             
         }
     }

@@ -13,7 +13,7 @@
     <div style="background-color: coral;">
         <ul>
             <?php foreach ($accounts as $account) : ?>
-                <li aria-readonly="id">Account holder: <?=ucfirst($account['name']), ' ' , ucfirst($account['surname']), ', AK: ' ,$account['IDCode']?><br> Account No. [<?= $account['id'] ?>] Account balance: <?= $account['funds'] ?>
+                <li >Account holder: <?=ucfirst($account['name']), ' ' , ucfirst($account['surname']), ', AK: ' ,$account['IDCode']?><br> Account No. [<?= $account['id'] ?>]<br> Account balance: <?= $account['funds'] ?>
                     [<a href="?action=add&id=<?= $account['id'] ?>">Add</a>]
                     [<a href="?action=rem&id=<?= $account['id'] ?>">Remove</a>]
                     <form action="?action=delete&id=<?= $account['id'] ?>" method="post">
