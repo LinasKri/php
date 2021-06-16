@@ -1,10 +1,10 @@
 <?php
-session_start();
+require __DIR__.'/bootstrap.php';
+
 if (!isset($_SESSION['logged'])) {
     header('Location: http://localhost/_php_/klases_darbai/13/login.php');
     die;
 }
-
 
 ?>
 
@@ -17,6 +17,7 @@ if (!isset($_SESSION['logged'])) {
     <title>Welcome to Members</title>
 </head>
 <body>
+    <?php include __DIR__.'/msg.php' ?> 
     <?php include __DIR__.'/menu.php'?>
     <h1>Member Page</h1>
 </body>

@@ -1,6 +1,5 @@
 <?php
-
-
+require __DIR__.'/bootstrap.php';
 ?>
 
 <!DOCTYPE html>
@@ -12,6 +11,7 @@
     <title>Welcome to Home</title>
 </head>
 <body>
+    <?php include __DIR__.'/msg.php' ?>
     <?php include __DIR__.'/menu.php'?>
     <h1>Home Page</h1>
 </body>

@@ -1,9 +1,11 @@
 <?php
-session_start();
+require __DIR__.'/bootstrap.php';
+
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     if(isset($_GET['logout'])){
         // 2. Atjungia vartotoja
         unset($_SESSION['logged'], $_SESSION['name']);
+        setMessage('Ate');
         header('Location: http://localhost/_php_/klases_darbai/13/login.php');
         die;
 
@@ -18,11 +20,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             if ($user['pass'] == md5($_POST['pass'])) {
                 $_SESSION['logged'] = 1;
                 $_SESSION['name'] = $user['name'];
+                setMessage('Labas, '.$user['name']);
                 header('Location: http://localhost/_php_/klases_darbai/13/member.php');
                 die;
             }
         }
     }
+    setMessage('Neteisingas slaptazodis');
+    header('Location: http://localhost/_php_/klases_darbai/13/login.php');
+        die;
 }
 
 ?>
@@ -35,6 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     <title>Login</title>
 </head>
 <body>
+    <?php include __DIR__.'/msg.php' ?>
     <?php include __DIR__.'/menu.php'?>
     <h1>Login</h1>
     <form action="https://localhost/_php_/klases_darbai/13/login.php" method="post">
