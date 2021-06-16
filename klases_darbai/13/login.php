@@ -3,8 +3,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     // 1. Rodyti forma
 
 } else {
-    // 1. Tikrinti duomenis
-
+    // 2. Tikrinti duomenis
+    $users = json_decode(file_get_contents(__DIR__.'/users.json'), 1);
+    foreach($users as $user) {
+        if ($user['name'] == $_POST['name']) {
+            if ($user['pass'] == md5($_POST['pass'])) {
+                $_SESSION['logged'] = 1;
+                $_SESSION['name'] = $user['name'];
+                header('Location: http://localhost/_php_/klases_darbai/13/member.php');
+                die;
+            }
+        }
+    }
 }
 
 ?>
