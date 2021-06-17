@@ -7,7 +7,9 @@
     <title>Remove Funds</title>
 </head>
 <body style="background-color: green;">
-    <?php include __DIR__.'/msg.php' ?> 
+    <div style="background-color: aquamarine;">
+        <?php include __DIR__.'/msg.php' ?>
+    </div>    
     <?php $id = $_GET['id'] ?? 0; ?>
     <div style="background-color: gold;">
         <?php include __DIR__.'/menu.php' ?>
