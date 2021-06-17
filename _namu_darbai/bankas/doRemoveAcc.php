@@ -8,7 +8,8 @@ foreach ($accounts as $index => $account) {
             setMessage('Saskaita istrinta');
             redirect();
         } else {
-            echo 'Account can not be deleted due to current balamce: ' .$account['funds'];
+            setMessage('Account can not be deleted due to current balamce: ' .$account['funds'].' €');
+            redirect();
         }
     }
 }

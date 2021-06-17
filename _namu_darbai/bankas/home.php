@@ -11,6 +11,9 @@
         <?php include __DIR__.'/msg.php' ?>
     </div>
     <div style="background-color: coral;">
+            <div style="background-color: gold;">
+                <?php include __DIR__.'/menu.php' ?>
+            </div>
         <ul>
         <?php
             usort($accounts, function($a, $b){
@@ -18,18 +21,16 @@
             });
         ?>
             <?php foreach ($accounts as $account) : ?>
-                <li >Account holder: <?=ucfirst($account['name']), ' ' , ucfirst($account['surname']), ', AK: ' ,$account['IDCode']?><br> Account No. [<?= $account['id'] ?>]<br> Account balance: <?= $account['funds'] ?> €
-                    [<a href="?action=add&id=<?= $account['id'] ?>">Add</a>]
-                    [<a href="?action=rem&id=<?= $account['id'] ?>">Remove</a>]
-                    <form action="?action=delete&id=<?= $account['id'] ?>" method="post">
-                    <button type="submit">Delete acc</button>
-                    </form><br>
-                </li>
+        <div style="border: 2px solid black;"><br>
+                Account holder: <?=ucfirst($account['name']), ' ' , ucfirst($account['surname']), ', AK: ' ,$account['IDCode']?><br> Account No. [<?= $account['id'] ?>]<br> Account balance: <?= $account['funds'] ?> €
+                [<a href="?action=add&id=<?= $account['id'] ?>">Add</a>]
+                [<a href="?action=rem&id=<?= $account['id'] ?>">Remove</a>]
+                <form action="?action=delete&id=<?= $account['id'] ?>" method="post">
+                <button type="submit">Delete acc</button>
+                </form><br>
+            </div>
             <?php endforeach ?>
         </ul>
-        <div style="background-color: gold;">
-        <?php include __DIR__.'/menu.php' ?>
-        </div>
     </div>   
 </body>
 </html>
