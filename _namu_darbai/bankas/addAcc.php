@@ -1,3 +1,7 @@
+<?php
+$iban = 'LT01 '.rand(1000000000000000, 9999999999999999);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

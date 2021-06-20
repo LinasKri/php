@@ -8,3 +8,4 @@ foreach ($accounts as &$account) {
         redirect();
     }
 }
+
