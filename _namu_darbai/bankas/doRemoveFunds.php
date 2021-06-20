@@ -1,8 +1,5 @@
 <?php
-function DelayCommand($functionToDelay, $delayTimeInSeconds) {
-    sleep($delayTimeInSeconds);
-    $functionToDelay();
-}
+
 $id = $_GET['id'] ?? 0;
 foreach ($accounts as &$account) {
     if ($account['id'] == $id) {
