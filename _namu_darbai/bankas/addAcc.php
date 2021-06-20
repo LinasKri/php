@@ -17,7 +17,10 @@
         <form action="?action=add-acc" method="post">
             <input type="text" name="name" placeholder="Name">
             <input type="text" name="surname" placeholder="Surname">
-            <input type="text" name="IDCode" placeholder="ID code"><br><br>
+            <input type="text" name="IDCode" placeholder="ID code"><br>
+            
+            <input type="text" name="id" urldecode="id" readonly><br>
+            
             <button>Add account</button>
         </form>
     </div>
