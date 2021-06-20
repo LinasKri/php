@@ -1,7 +1,7 @@
 <?php 
 
 $users = [
-    ['name' => 'Linutis', 'pass' => md5('321')],
+    ['name' => 'Linas', 'pass' => md5('321')],
     ['name' => 'Jolanta', 'pass' => md5('321')],
     ['name' => 'Rokas', 'pass' => md5('321')],
 ];

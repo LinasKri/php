@@ -1,3 +1,12 @@
+<?php
+require __DIR__.'/index.php';
+if (!isset($_SESSION['logged'])) {
+    header('Location: https://localhost/_php_/_namu_darbai/bankas/login.php');
+    die;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +16,7 @@
     <title>Bank</title>
 </head>
 <body style="background-color: green;">
+    <h1>Welcome to Admin section</h1>
     <div style="background-color: aquamarine;">
         <?php include __DIR__.'/msg.php' ?>
     </div>
