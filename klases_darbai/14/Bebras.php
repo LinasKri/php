@@ -10,8 +10,9 @@ class Bebras{
 
 
 // ------------------
-// funkcijos
-
+// metodai
+    public function sayHello(){
+        echo "<h2>Hello, $this->name!</h2>";
+    }
 
 }
-?>
