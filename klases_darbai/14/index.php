@@ -13,7 +13,9 @@ $bebras2->name = 'Bobikas';
 
 $bebras2->addYear();
 
-echo $bebras2->getAge();
+echo $bebras2->color;
+
+// echo $bebras2->getAge();
 
 $bebras2->setAge(20);
 

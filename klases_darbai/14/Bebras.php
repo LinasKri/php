@@ -23,6 +23,11 @@ class Bebras{
     public function getAge(){
         return $this-> age;
     }
+
+    public function __get($prop) {
+        return $this-> $prop;
+    }
+
     public function setAge($age){
         if (!is_integer($age)) {
             echo 'Galimi tik skaiciai';
