@@ -25,8 +25,28 @@ class Bebras{
     }
 
     public function __get($prop) {
+        
+        // if(!in_array($prop, ['age', 'color'])){
+        //     return null;
+        // }
+        if ($prop == 'color') {
+            return null;
+        }
+        if ($prop == 'rand') {
+            return $this -> randomNumber();
+        }
         return $this-> $prop;
     }
+
+    public function __call($name, $arguments)
+    {
+        return $this ->{$name}(...$arguments);
+    }
+
+    public function randomNumber($time){
+        return rand(10,99)*$time;
+    }
+
 
     public function setAge($age){
         if (!is_integer($age)) {

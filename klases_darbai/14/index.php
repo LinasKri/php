@@ -13,7 +13,7 @@ $bebras2->name = 'Bobikas';
 
 $bebras2->addYear();
 
-echo $bebras2->color;
+echo $bebras2->randomNumber(1000);
 
 // echo $bebras2->getAge();
 
