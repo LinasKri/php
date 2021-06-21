@@ -8,13 +8,15 @@ $bebras2 =  new Bebras;
 $bebras3 = $bebras1;
 
 echo'<pre>';
-// var_dump($bebras1);
-// echo '<br>';
-// var_dump($bebras2);
-// echo '<br>';
-// var_dump($bebras3);
-// echo '<br>';
 
-echo $bebras1->name;
+$bebras2->name = 'Bobikas';
+
+$bebras2->addYear();
+
+echo $bebras2->getAge();
+
+$bebras2->setAge(20);
+
 
 $bebras1->sayHello();
+$bebras2->sayHello();
