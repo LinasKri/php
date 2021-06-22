@@ -13,3 +13,7 @@ $kibiras1 -> pridetiDaugAkmenu(30);
 
 
 echo $kibiras1 -> kiekPririnktaAkmenu().'<br>';
+
+$kibiras1 -> pridetiDaugAkmenu(40);
+
+echo $kibiras1 -> kiekPririnktaAkmenu().'<br>';
