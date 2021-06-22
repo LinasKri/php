@@ -5,7 +5,7 @@ $kibiras1 = new Kibiras1;
 
 echo $kibiras1 -> kiekPririnktaAkmenu().'<br>';
 
-$kibiras1 -> pridetiAkmenu();
+$kibiras1 -> prideti1Akmeni();
 
 echo $kibiras1 -> kiekPririnktaAkmenu().'<br>';
 

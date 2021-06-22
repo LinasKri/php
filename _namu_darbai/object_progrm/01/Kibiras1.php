@@ -17,7 +17,7 @@ class Kibiras1{
     }
 
 
-    public function pridetiAkmenu(){
+    public function prideti1Akmeni(){
         $this -> akmenuKiekis++;
     }
 
