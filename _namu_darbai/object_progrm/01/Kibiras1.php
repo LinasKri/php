@@ -6,15 +6,15 @@ class Kibiras1{
 
 
 
-    public function __set($prop, $value)
-    {
-        $this-> $prop = $value;
-    }
+    // public function __set($prop, $value)
+    // {
+    //     $this-> $prop = $value;
+    // }
 
-    public function __get($akmenuKiekis)
-    {
-        return $this->$akmenuKiekis;
-    }
+    // public function __get($akmenuKiekis)
+    // {
+    //     return $this->$akmenuKiekis;
+    // }
 
 
     public function prideti1Akmeni(){
