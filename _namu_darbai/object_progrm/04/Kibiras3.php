@@ -3,9 +3,8 @@
 
 class Kibiras3{
     protected $akmenuKiekis = 0;
-    static private $akmenuKiekisVisuoseKibiruose;
 
-
+    
     public function prideti1Akmeni(){
         $this -> akmenuKiekis++;
         
