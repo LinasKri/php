@@ -8,6 +8,6 @@ class Miskas{
     }
 
     protected function papasakok(){
-        echo "Aš gyvenu miške pavadintame ". $this->name ." , o kur tu?<br>";
+        echo "Aš gyvenu miške pavadintame $this->name, o kur tu?<br>";
     }
 }

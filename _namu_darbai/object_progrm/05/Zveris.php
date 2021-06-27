@@ -12,6 +12,7 @@ class Zveris extends Miskas{
         echo "Aš esu žvėris vardu $this->name. <br>";
         parent::papasakok();
     }
+
     public function prisistatyk(){
         $this->papasakok();
     }
