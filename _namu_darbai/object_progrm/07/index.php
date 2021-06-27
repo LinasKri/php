@@ -5,7 +5,7 @@ require __DIR__ . '/Krepsys.php';
 
 $krepsys = new Krepsys;
 $kiekis = 0;
-$grybas1 =1;
+$grybas1 = 1;
 
 do {
     $grybas = new Grybas;
@@ -16,4 +16,4 @@ do {
     
 } while (Krepsys::dydis >= $kiekis);
 
-echo "Viso: $kiekis g.";
+echo "<br>Viso: $kiekis g.";
