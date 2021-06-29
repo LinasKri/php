@@ -14,6 +14,6 @@ do {
         echo 'Grybo '.$grybas1++. ' svoris: ' . $grybas -> svoris .'g.<br>';
     }
     
-} while (Krepsys::dydis >= $kiekis);
+} while (Krepsys::DYDIS >= $kiekis);
 
 echo "<br>Viso: $kiekis g.";
