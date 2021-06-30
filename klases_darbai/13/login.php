@@ -1,36 +1,34 @@
 <?php
-require __DIR__.'/bootstrap.php';
+require __DIR__ . '/bootstrap.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-    if(isset($_GET['logout'])){
-        // 2. Atjungia vartotoja
+    if (isset($_GET['logout'])) {
+        //2. Atjungia juseri
         unset($_SESSION['logged'], $_SESSION['name']);
         setMessage('Ate');
-        header('Location: http://localhost/_php_/klases_darbai/13/login.php');
+        header('Location: http://localhost/barsukas/13/login.php');
         die;
-
     }
-    // 1. Rodyti forma
-
-} else {
-    // 2. Tikrinti duomenis
-    $users = json_decode(file_get_contents(__DIR__.'/users.json'), 1);
-    foreach($users as $user) {
+        //1. Rodyti forma
+}
+else {
+    //2. Tikrint prisijungimo duomenis
+    $users = json_decode( file_get_contents(__DIR__.'/users.json'), 1);
+    foreach ($users as $user) {
         if ($user['name'] == $_POST['name']) {
             if ($user['pass'] == md5($_POST['pass'])) {
                 $_SESSION['logged'] = 1;
                 $_SESSION['name'] = $user['name'];
                 setMessage('Labas, '.$user['name']);
-                header('Location: http://localhost/_php_/klases_darbai/13/member.php');
+                header('Location: http://localhost/barsukas/13/member.php');
                 die;
             }
         }
     }
-    setMessage('Neteisingas slaptazodis');
-    header('Location: http://localhost/_php_/klases_darbai/13/login.php');
-        die;
+    setMessage('Labai Blogai');
+    header('Location: http://localhost/barsukas/13/login.php');
+    die;
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,13 +39,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     <title>Login</title>
 </head>
 <body>
-    <?php include __DIR__.'/msg.php' ?>
-    <?php include __DIR__.'/menu.php'?>
+    <?php include __DIR__ . '/msg.php' ?>
+    <?php include __DIR__ . '/menu.php' ?>
     <h1>Login</h1>
-    <form action="https://localhost/_php_/klases_darbai/13/login.php" method="post">
-        <input type="text" name="name">
-        <input type="password" name="pass">
-        <button type="submit">Login</button>
+    <form action="http://localhost/barsukas/13/login.php" method="post">
+    <input type="text" name="name">
+    <input type="password" name="pass">
+    <button type="submit">Login</button>
     </form>
 </body>
 </html>

@@ -1,3 +1,13 @@
+<h1>Go go Barsukas</h1>
+
 <?php
 
-echo 'labas';
+echo 'Labas, ką tu?';
+
+
+
+
+
+
+
+
