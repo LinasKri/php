@@ -1,7 +1,8 @@
 <?php
 session_start();
-function getMessage(){
-    if(!isset($_SESSION['msg'])){
+function getMessage()
+{
+    if (!isset($_SESSION['msg'])) {
         return false;
     }
     $msg = $_SESSION['msg'];
@@ -9,6 +10,7 @@ function getMessage(){
     return $msg;
 }
 
-function setMessage(string $msg){
+function setMessage(string $msg)
+{
     $_SESSION['msg'] = $msg;
 }

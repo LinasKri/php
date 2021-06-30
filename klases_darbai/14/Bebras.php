@@ -60,9 +60,9 @@ class Bebras {
                 return;
             }
             $this->age = $value;
-       }
-       echo 'Petrai, tu pats asilas. Tu to daryti negali';
-       
+        }
+        echo 'Petrai, tu pats asilas. Tu to daryti negali';
+        
         // $this->$prop = $value;
     }
 
