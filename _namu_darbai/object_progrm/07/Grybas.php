@@ -1,13 +1,13 @@
 <?php
 
 class Grybas {
-    private bool $valgomas;
-    private bool $sukirmijes;
+    private $valgomas;
+    private $sukirmijes;
     private $svoris;
     
     public function __construct(){
-        $this->valgomas = (bool) rand(0,1);
-        $this->sukirmijes = (bool) rand(0,1);
+        $this->valgomas = rand(0,1) ?  true : false;
+        $this->sukirmijes = rand(0,1) ?  true : false;
         $this->svoris = rand(0,45);
     }
 

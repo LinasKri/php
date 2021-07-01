@@ -78,7 +78,7 @@ class Bebras {
             return $this->randomNumber();
         }
 
-       return $this->$prop;
+        return $this->$prop;
     }
 
     public function __call($name, $arguments)
