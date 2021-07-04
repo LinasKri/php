@@ -1,6 +1,6 @@
 <?php
-namespace Belgum;
+namespace Belgium;
 
 class Animal{
-
+    public static $go ='Begium!';
 }
