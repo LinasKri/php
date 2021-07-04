@@ -1,4 +1,5 @@
 <?php
+defined('ENTER') || die;
 session_start();
 define('DIR', __DIR__.'/');
 define('URL', 'http://localhost/_php_/_namu_darbai/obj_bankas/');
