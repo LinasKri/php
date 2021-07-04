@@ -9,6 +9,6 @@ class FundController {
     }
 
     public function index() {
-        require DIR.'views/home.php';
+        return App::view('home');
     }    
 }
