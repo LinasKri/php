@@ -3,9 +3,10 @@
 class FundController {
 
 
-    public function fundTest($say) {
+    public function fundTest($whatToSay) {
         
-        return App::view('test', ['whatToSay' => $say ]);
+        $labas = 'Hello, little One';
+        return App::view('test', compact('whatToSay', 'labas'));
     }
 
     public function index() {
