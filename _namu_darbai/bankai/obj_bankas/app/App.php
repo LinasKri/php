@@ -9,7 +9,8 @@ class App {
         ob_end_flush();
     }
 
-    public static function view($file){
+    public static function view($file, $data = []){
+        extract($data);
         require DIR.'views/'.$file.'.php';
     }
 

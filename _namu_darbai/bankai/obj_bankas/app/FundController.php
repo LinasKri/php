@@ -3,9 +3,9 @@
 class FundController {
 
 
-    public function fundTest($say = '') {
-        echo 'FundController<br>';
-        echo $say;
+    public function fundTest($say) {
+        
+        return App::view('test', ['whatToSay' => $say ]);
     }
 
     public function index() {

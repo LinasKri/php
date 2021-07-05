@@ -1,6 +1,6 @@
 <?php require DIR.'views/top.php'; ?>
 
-
-Vidus (home)
+<h2>HI from controller</h2>
+<?= $whatToSay ?>
 
 <?php require DIR.'views/bottom.php'; ?>
