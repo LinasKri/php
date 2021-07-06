@@ -16,12 +16,23 @@ class App {
         require DIR.'views/'.$file.'.php';
     }
 
+    public static function redirect($path = ''){
+        header('Location: '.URL.$path);
+        die;
+    }
+
     private static function router(){
 
         $uri = str_replace(INSTALL_DIR, '', $_SERVER['REQUEST_URI']);
         $uri = explode('/', $uri);
 
-        // _d($uri);
+        if ('create-acc' == $uri[0]) {
+            if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+                return (new BankController) -> create();
+            } else {
+                return (new BankController) -> save();
+            }
+        }
 
         // ROUTER
 

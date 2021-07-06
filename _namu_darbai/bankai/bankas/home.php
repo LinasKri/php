@@ -25,7 +25,7 @@
                 return $a['surname'] <=> $b['surname'];
             });
         ?>
-            <?php foreach ($accounts as $account) : ?>
+        <?php foreach ($accounts as $account) : ?>
         <div style="border: 2px solid black;"><br>
         <ul>
             Account holder: <?=ucfirst($account['name']), ' ' , ucfirst($account['surname']), '<br> AK: ' ,$account['IDCode']?><br> Account No. [<?= $account['id'] ?>]<br> Account balance: <?= $account['funds'] ?> €

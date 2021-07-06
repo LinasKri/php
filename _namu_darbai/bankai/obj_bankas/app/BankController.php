@@ -1,7 +1,6 @@
 <?php
 namespace Bank;
 
-
 class BankController {
 
 
@@ -13,5 +12,21 @@ class BankController {
 
     public function index() {
         return App::view('home');
+    }   
+    
+    public function create() {
+        return App::view('create_acc');
+    }    
+
+    public function save() {
+
+        $account = ['name' => $_POST['name'],
+			'surname' => $_POST['surname'], 
+			'IDCode' => $_POST['IDCode'],
+			'id' => $_POST['id'], 
+			'funds' => 0];
+
+        Json::getJson() -> create($account);
+        App::redirect();
     }    
 }

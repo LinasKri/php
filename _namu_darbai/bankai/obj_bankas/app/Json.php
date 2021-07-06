@@ -1,12 +1,18 @@
 <?php
-
+namespace Bank;
 use App\DB\DataBase;
 
-class Jason implements DataBase {
+class Json implements DataBase {
 
     private $data;
+    private static $obj;
 
-    public function __construct()
+    public static function getJson()
+    {
+        return self::$obj ?? self:: $obj = new self;
+    }
+
+    private function __construct()
     {
         if (!file_exists(DIR.'/accounts.json')) {
             file_put_contents(DIR.'/accounts.json', json_encode([]));
@@ -47,7 +53,6 @@ class Jason implements DataBase {
         foreach ($this -> data as $index => $data) {
             if ($data['id'] == $userId){
                 return $this->data[$index];
-                
             }
         }
     }
