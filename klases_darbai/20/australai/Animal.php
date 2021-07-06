@@ -1,6 +1,7 @@
 <?php
 namespace Australia;
 
-class Animal{
+class Animal {
     
+    public static $go = 'Australia';
 }

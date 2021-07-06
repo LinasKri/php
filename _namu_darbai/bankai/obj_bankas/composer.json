@@ -1,0 +1,17 @@
+{
+    "name": "obj/bankai",
+    "description": "educational ex",
+    "authors": [
+        {
+            "name": "LinasKri",
+            "email": "izodas@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Bank\\": "app",
+            "App\\DB\\": "app"
+        }
+    },
+    "require": {}
+}
