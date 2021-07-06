@@ -34,6 +34,26 @@ class App {
             }
         }
 
+        if ('add' == $uri[0] && isset($uri[1])) {
+            if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+                return (new BankController) -> add($uri[1]);
+            } else {
+                return (new BankController) -> doAdd($uri[1]);
+            }
+        }
+
+        if ('rem' == $uri[0] && isset($uri[1])) {
+            if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+                return (new BankController) -> remove($uri[1]);
+            } else {
+                return (new BankController) -> doRemove($uri[1]);
+            }
+        }
+
+        if ('delete' == $uri[0] && isset($uri[1]) && $_SERVER['REQUEST_METHOD'] == 'POST') {
+            return (new BankController) -> delete($uri[1]);
+        }
+
         // ROUTER
 
         if ($uri[0]== 'testas' && isset($uri[1])) {
@@ -41,6 +61,7 @@ class App {
         }elseif ($uri[0] === '' && count($uri) === 1){
             return (new BankController) -> index();
         }
+        
         self::view('404');
         http_response_code(404);
     }
