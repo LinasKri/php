@@ -50,8 +50,8 @@ class Json implements DataBase {
     }
 
     public function show(int $userId) : array {
-        foreach ($this -> data as $index => $data) {
-            if ($data['id'] == $userId){
+        foreach ($this -> data as $index => $account) {
+            if ($account['id'] == $userId){
                 return $this->data[$index];
             }
         }

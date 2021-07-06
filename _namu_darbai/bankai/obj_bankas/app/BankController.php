@@ -14,8 +14,17 @@ class BankController {
         return App::view('index', ['accounts' => Json::getJson() -> showAll()]);
     } 
     
-    public function add() {
-        return App::view('index', ['accounts' => Json::getJson() -> showAll()]);
+    public function add($id) {
+        return App::view('add', ['id' => $id]);
+    }   
+
+    public function doAdd($id) {
+
+        $id = (int) $id;
+        $account = Json::getJson()->show($id);
+        $account['amount'] += (int) $_POST['amount'];
+        Json::getJson()->update($id, $account);
+        App::redirect();
     }   
     
     public function create() {
