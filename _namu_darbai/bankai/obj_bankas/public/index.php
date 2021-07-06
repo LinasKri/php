@@ -1,6 +1,6 @@
 <?php
 define('ENTER', true);
-require __DIR__.'/bootstrap.php';
+require __DIR__.'/../bootstrap.php';
 
 // // controller
 // require DIR.'app/FundController.php';

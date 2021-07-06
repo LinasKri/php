@@ -9,7 +9,8 @@
     ],
     "autoload": {
         "psr-4": {
-            "Bank\\": "app"
+            "Bank\\": "app",
+            "App\\DB\\": "app"
         }
     },
     "require": {}
