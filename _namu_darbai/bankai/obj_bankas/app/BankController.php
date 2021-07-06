@@ -12,6 +12,10 @@ class BankController {
 
     public function index() {
         return App::view('index', ['accounts' => Json::getJson() -> showAll()]);
+    } 
+    
+    public function add() {
+        return App::view('index', ['accounts' => Json::getJson() -> showAll()]);
     }   
     
     public function create() {
