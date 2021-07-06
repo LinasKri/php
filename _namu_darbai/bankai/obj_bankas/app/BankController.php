@@ -1,8 +1,8 @@
 <?php
+namespace Bank;
 
 
-
-class FundController {
+class BankController {
 
 
     public function fundTest($whatToSay) {
