@@ -22,22 +22,37 @@ class Jason implements DataBase {
 
 
     public function create(array $userData) : void {
-
+        $this -> data[] = $userData;
     }
 
     public function update(int $userId, array $userData) : void {
-
+        foreach ($this -> data as $index => $data) {
+            if ($data['id'] == $userId){
+                $this->data[$index] = $userData;
+                return;
+            }
+        }
     }
 
     public function delete(int $userId) : void {
-
+        foreach ($this -> data as $index => $data) {
+            if ($data['id'] == $userId){
+                unset($this->data[$index]);
+                return;
+            }
+        }
     }
 
     public function show(int $userId) : array {
-
+        foreach ($this -> data as $index => $data) {
+            if ($data['id'] == $userId){
+                return $this->data[$index];
+                
+            }
+        }
     }
 
     public function showAll() : array {
-
+        return $this->data;
     }
 }
