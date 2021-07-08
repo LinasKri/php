@@ -26,20 +26,33 @@ class BankController {
         Json::getJson()->update($id, $account);
         App::redirect();
     }   
-    
+
+    public function remove($id) {
+        return App::view('remove', ['id' => $id]);
+    }
+
+    public function doRemove($id)
+    {
+        $id = (int) $id;
+        $account = Json::getJson()->show($id);
+        $account['amount'] -= (int) $_POST['amount'];
+        Json::getJson()->update($id, $account);
+        App::redirect();
+    }
+
+    public function delete($id){
+        Json::getJson()->delete($id);
+        App::redirect();
+    }
+
     public function create() {
         return App::view('create_acc');
     }    
 
     public function save() {
 
-        $account = ['name' => $_POST['name'],
-			'surname' => $_POST['surname'], 
-			'IDCode' => $_POST['IDCode'],
-			'id' => $_POST['id'], 
-			'funds' => 0];
-
-        Json::getJson() -> create($account);
+        $account = ['id' => rand(10000000, 99999999), 'amount' => 0]; // be garantiju unikalumui
+        Json::getJson()->create($account);
         App::redirect();
     }    
 }

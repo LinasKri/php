@@ -1,4 +1,3 @@
-  
 <?php require DIR.'views/top.php' ?>
 
 <form action="<?= URL ?>rem/<?= $id ?>" method="post">
