@@ -1,20 +1,20 @@
-<?php require DIR.'views/top.php'; ?>
+<?php require DIR.'views/top.php' ?>
 
 <div style="background-color: gold;">
     <?php include DIR.'/menu.php' ?>
 </div>
-
-<?php foreach ($accounts as $account) : ?>
-<div style="border: 2px solid black; background-color: coral;;"><br>
-    <ul>
-        Account holder: <?=ucfirst($account['name']), ' ' , ucfirst($account['surname']), '<br> AK: ' ,$account['IDCode']?><br> Account No. [<?= $account['id'] ?>]<br> Account balance: <?= $account['funds'] ?> €
-        [<a href="add/<?= $account['id'] ?>">Add</a>]
-        [<a href="rem/<?= $account['id'] ?>">Remove</a>]
-        <form action="delete/<?= $account['id'] ?>" method="post"><br>
-        <button type="submit">Delete acc</button>
-        </form><br>
-</div>
+<ul>
+    <?php foreach($accounts as $account) : ?>
+        <div style="border: 2px solid black; background-color: coral;;"><br>
+            <li>
+                Dėžė Nr. <?= $account['id'] ?> Viso agukų: <?= $account['amount'] ?>
+                [<a href="<?= URL ?>add/<?= $account['id'] ?>">Add</a>]
+                [<a href="<?= URL ?>rem/<?= $account['id'] ?>">Remove</a>]
+                <form action="<?= URL ?>delete/<?= $account['id'] ?>" method="post">
+                <button type="submit">Delete acc</button>
+                </form>
+        </div>
+            </li>
     <?php endforeach ?>
-    </ul>
-
-<?php require DIR.'views/bottom.php'; ?>
+</ul>
+<?php require DIR.'views/bottom.php' ?>
