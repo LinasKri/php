@@ -1,5 +1,9 @@
 <?php require DIR.'views/top.php'; ?>
 
+<div style="background-color: gold;">
+    <?php include DIR.'/menu.php' ?>
+</div>
+
 <?php $iban = 'LT01 '.rand(1000000000000000, 9999999999999999); ?>
 
 <form action="<?= URL ?>create-acc" method="post">
