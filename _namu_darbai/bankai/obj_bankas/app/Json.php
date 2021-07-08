@@ -55,7 +55,6 @@ class Json implements DataBase {
                 return $this->data[$index];
             }
         }
-        // return [];
     }
 
     public function showAll() : array {
