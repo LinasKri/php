@@ -61,7 +61,7 @@ class App {
         }elseif ($uri[0] === '' && count($uri) === 1){
             return (new BankController) -> index();
         }
-        
+
         self::view('404');
         http_response_code(404);
     }
