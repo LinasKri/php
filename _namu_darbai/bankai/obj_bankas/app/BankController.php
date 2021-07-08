@@ -31,8 +31,7 @@ class BankController {
         return App::view('remove', ['id' => $id]);
     }
 
-    public function doRemove($id)
-    {
+    public function doRemove($id) {
         $id = (int) $id;
         $account = Json::getJson()->show($id);
         $account['amount'] -= (int) $_POST['amount'];
@@ -40,7 +39,7 @@ class BankController {
         App::redirect();
     }
 
-    public function delete($id){
+    public function delete($id) {
         Json::getJson()->delete($id);
         App::redirect();
     }
