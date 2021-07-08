@@ -52,3 +52,23 @@ while ($row = $stmt->fetch()) // duok man viena eilute
 {
     echo $row['id'] .' '. $row['name'].' '. $row['height'].' '. $row['type'].'<br>';
 }
+
+// Redagavimas
+// UPDATE table_name
+// SELECT column1, column2, column3,..
+
+$sql = "UPDATE techno
+SET height = 69, `name` = ' Didelis Berzas'
+WHERE `name` = 'Berzas'
+";
+
+$pdo->query($sql);
+
+//Trinimas
+// DELETE FROM table_name
+// WHERE some_column =  some_value
+
+$sql = "DELETE FROM techno
+WHERE id = 30 OR 1
+";
+$pdo->query($sql);
