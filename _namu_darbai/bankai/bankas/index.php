@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 function redirect(){
     header('Location: http://localhost/_php_/_namu_darbai/bankas/');
     die;
