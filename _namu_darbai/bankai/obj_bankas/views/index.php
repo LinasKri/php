@@ -7,7 +7,7 @@
     <?php foreach($accounts as $account) : ?>
         <div style="border: 2px solid black; background-color: coral;;"><br>
             <li>
-                Dėžė Nr. <?= $account['id'] ?> Viso agukų: <?= $account['amount'] ?>
+                Account No. <?= $account['id'] ?> Account balance: <?= $account['amount'] ?>
                 [<a href="<?= URL ?>add/<?= $account['id'] ?>">Add</a>]
                 [<a href="<?= URL ?>rem/<?= $account['id'] ?>">Remove</a>]
                 <form action="<?= URL ?>delete/<?= $account['id'] ?>" method="post">
