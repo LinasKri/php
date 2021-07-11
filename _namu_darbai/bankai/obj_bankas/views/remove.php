@@ -1,5 +1,9 @@
 <?php require DIR.'views/top.php' ?>
 
+<div style="background-color: gold;">
+    <?php include DIR.'/menu.php' ?>
+</div>
+
 <div style="background-color: coral; padding: 20px">
     Account No.:<?= $id ?>
     <form action="<?= URL ?>rem/<?= $id ?>" method="post">

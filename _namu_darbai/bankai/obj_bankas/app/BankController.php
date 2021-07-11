@@ -50,7 +50,12 @@ class BankController {
 
     public function save() {
 
-        $account = ['id' => rand(10000000, 99999999), 'amount' => 0]; // be garantiju unikalumui
+        $account = ['id' => rand(10000000, 99999999), 
+        'name' => $_POST['name'], 
+        'surname' => $_POST['surname'], 
+        'idCode' => $_POST['idCode'],
+        'iban' => $_POST['iban'], 
+        'amount' => 0]; // be garantiju unikalumui
         Json::getJson()->create($account);
         App::redirect();
     }    
