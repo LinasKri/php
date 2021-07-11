@@ -1,11 +1,12 @@
 <?php require DIR.'views/top.php' ?>
 
 <div style="background-color: gold;">
-    ALIEN BANK👽💰<?php include DIR.'/menu.php' ?>
+    <h1>ALIEN BANK👽💰</h1>
+    <?php include DIR.'/menu.php' ?>
 </div>
 <ul>
     <?php foreach($accounts as $account) : ?>
-        <div style="border: 2px solid black; background-color: coral;margin-top: 15px; margin-right: 40px"><br>
+        <div style="border: 2px solid black; background-color:khaki;margin-top: 15px; margin-right: 40px; padding: 10px;">
             Account No.: <?= $account['id'] ?> <br>
             Account holder: <?= ucfirst($account['name']) ?> <?= ucfirst($account['surname']) ?> <br>
             Perssonal ID: <?= $account['idCode'] ?> <br>

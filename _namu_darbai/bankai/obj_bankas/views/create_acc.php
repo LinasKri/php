@@ -1,6 +1,7 @@
 <?php require DIR.'views/top.php'; ?>
 
 <div style="background-color: gold;">
+    <h1>ALIEN BANK👽💰</h1>
     <?php include DIR.'/menu.php' ?>
 </div>
 
