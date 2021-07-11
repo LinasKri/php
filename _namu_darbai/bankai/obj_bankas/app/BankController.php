@@ -41,7 +41,9 @@ class BankController {
     }
 
     public function delete($id) {
-        Json::getJson()->delete($id);
+        if ($account['amount'] = 0) {
+            Json::getJson()->delete($id);
+        }
         App::redirect();
     }
 
