@@ -1,7 +1,7 @@
 <?php require DIR.'views/top.php' ?>
 
 <div style="background-color: gold;">
-    <?php include DIR.'/menu.php' ?>
+    ALIEN BANK👽💰<?php include DIR.'/menu.php' ?>
 </div>
 <ul>
     <?php foreach($accounts as $account) : ?>
