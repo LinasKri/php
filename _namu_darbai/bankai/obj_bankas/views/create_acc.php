@@ -1,13 +1,13 @@
 <?php require DIR.'views/top.php'; ?>
 
-<div style="background-color: gold;">
+<div style="background-color: gold; margin-bottom: 15px">
     <h1>ALIEN BANK👽💰</h1>
     <?php include DIR.'/menu.php' ?>
 </div>
 
 <?php $iban = 'LT01 '.rand(1000000000000000, 9999999999999999); ?>
 
-<div style="background-color: coral; padding: 20px">
+<div style="background-color: khaki; padding: 20px">
     <form action="<?= URL ?>create-acc" method="post">
         <input type="text" name="name" placeholder="Name">
         <input type="text" name="surname" placeholder="Surname">
