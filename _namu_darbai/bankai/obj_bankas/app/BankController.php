@@ -22,7 +22,7 @@ class BankController {
 
         $id = (int) $id;
         $account = Json::getJson()->show($id);
-        $account['amount'] += (int) $_POST['amount'];
+        $account['amount'] += (float) $_POST['amount'];
         Json::getJson()->update($id, $account);
         App::redirect();
     }   
@@ -34,7 +34,7 @@ class BankController {
     public function doRemove($id) {
         $id = (int) $id;
         $account = Json::getJson()->show($id);
-        $account['amount'] -= (int) $_POST['amount'];
+        $account['amount'] -= (float) $_POST['amount'];
         Json::getJson()->update($id, $account);
         App::redirect();
     }
