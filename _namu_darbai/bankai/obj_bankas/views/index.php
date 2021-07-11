@@ -11,8 +11,8 @@
             Perssonal ID: <?= $account['idCode'] ?> <br>
             IBAN: <?= $account['iban'] ?><br>
             Account balance: <?= $account['amount'] ?><br>
-            [<a href="<?= URL ?>add/<?= $account['id'] ?>">Add</a>]
-            [<a href="<?= URL ?>rem/<?= $account['id'] ?>">Remove</a>]
+            [<a href="<?= URL ?>add/<?= $account['id'] ?>">Add funds</a>]
+            [<a href="<?= URL ?>rem/<?= $account['id'] ?>">Remove funds</a>]
             <form action="<?= URL ?>delete/<?= $account['id'] ?>" method="post">
             <button type="submit">Delete acc</button>
             </form>

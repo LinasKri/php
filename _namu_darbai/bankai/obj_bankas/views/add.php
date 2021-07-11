@@ -19,7 +19,7 @@
 
 
 
-<!-- Account holder: <?= $account['name'] ?> <?= $account['surname'] ?> <br>
-Perssonal ID: <?= $account['idCode'] ?> <br>
-IBAN: <?= $account['iban'] ?><br>
-Account balance: <?= $account['amount'] ?><br> -->
+    <!-- Account holder: <?= $name ?> <?= $surname ?> <br>
+    Perssonal ID: <?= $account['idCode'] ?> <br>
+    IBAN: <?= $account['iban'] ?><br>
+    Account balance: <?= $amount ?><br> -->
