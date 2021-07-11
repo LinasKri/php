@@ -5,7 +5,7 @@
 </div>
 <ul>
     <?php foreach($accounts as $account) : ?>
-        <div style="border: 2px solid black; background-color: coral;margin-top: 15px;"><br>
+        <div style="border: 2px solid black; background-color: coral;margin-top: 15px; margin-right: 40px"><br>
             Account No.: <?= $account['id'] ?> <br>
             Account holder: <?= ucfirst($account['name']) ?> <?= ucfirst($account['surname']) ?> <br>
             Perssonal ID: <?= $account['idCode'] ?> <br>
