@@ -15,7 +15,7 @@ class BankController {
     } 
     
     public function add($id) {
-        return App::view('add', ['id' => $id]);
+        return App::view('add', ['id' => $id, 'accounts' => Json::getJson()->showAll()]);
     }   
 
     public function doAdd($id) {

@@ -65,7 +65,7 @@ class App {
 
 
 
-        if ($uri[0] == 'testas' && isset($uri[1])) {
+        if ($uri[0] == 'test' && isset($uri[1])) {
             $ac = new BankController;
             return $ac->fundTest($uri[1]);
         }
