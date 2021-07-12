@@ -9,9 +9,9 @@
         <div style="border: 2px solid black; background-color: khaki; margin-top: 15px; margin-right: 40px; padding: 10px;">
             Account No.: <?= $account['id'] ?> <br>
             Account holder: <?= ucfirst($account['name']) ?> <?= ucfirst($account['surname']) ?> <br>
-            Perssonal ID: <?= $account['idCode'] ?> <br>
+            Personal ID: <?= $account['idCode'] ?> <br>
             IBAN: <?= $account['iban'] ?><br>
-            Account balance: <?= $account['amount'] ?><br>
+            Account balance: <?= $account['amount'] ?> €<br>
             [<a href="<?= URL ?>add/<?= $account['id'] ?>">Add funds</a>]
             [<a href="<?= URL ?>rem/<?= $account['id'] ?>">Remove funds</a>]
             <form action="<?= URL ?>delete/<?= $account['id'] ?>" method="post">
