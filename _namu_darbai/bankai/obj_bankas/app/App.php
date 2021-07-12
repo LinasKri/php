@@ -22,6 +22,8 @@ class App {
         die;
     }
 
+//----------------------------------------------------------------------------------------------------------
+
     private static function router()
     {
         $uri = str_replace(INSTALL_DIR, '', $_SERVER['REQUEST_URI']);
@@ -33,7 +35,7 @@ class App {
 
 
 
-        if ('create-box' == $uri[0]) {
+        if ('create-acc' == $uri[0]) {
             if ('GET' == $_SERVER['REQUEST_METHOD']) {
                 return (new BankController)->create();
             }
