@@ -27,7 +27,7 @@ class BankController {
     }   
 
     public function remove($id) {
-        return App::view('remove', ['id' => $id]);
+        return App::view('remove', ['id' => $id, 'accounts' => Json::getJson()->showAll()]);
     }
 
     public function doRemove($id) {

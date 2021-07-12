@@ -6,7 +6,14 @@
 </div>
 
 <div style="background-color: khaki; padding: 20px">
-    Account No.:<?= $id ?>
+    Account No.:<?= $id ?><br>
+    <?php
+    foreach ($accounts as $account){
+        if ($account['id'] == $id) {
+            echo 'Account holder: '. $account['name'].' '.$account['surname'].'<br> Account balance: '. $account['amount'].' €' ;
+        }
+    }
+    ?>
     <form action="<?= URL ?>rem/<?= $id ?>" method="post">
         <input type="text" name="amount" value="">
         <button>Remove funds</button>
