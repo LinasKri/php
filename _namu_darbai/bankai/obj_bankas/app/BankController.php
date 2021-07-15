@@ -3,6 +3,18 @@ namespace Bank;
 
 class BankController {
 
+    // private static $dbType = 'json';
+    private static $dbType = 'maria';
+
+    public static function getData(){
+
+        if (self::$dbType = 'json') {
+            return Json::getJson();
+        }
+        if (self::$dbType = 'maria') {
+            return Maria::getMaria();
+        }
+    }
 
     public function fundTest($whatToSay) {
         
@@ -11,39 +23,39 @@ class BankController {
     }
 
     public function index() {
-        return App::view('index', ['accounts' => Json::getJson() -> showAll()]);
+        return App::view('index', ['accounts' => self::getData() -> showAll()]);
     } 
     
     public function add($id) {
-        return App::view('add', ['id' => $id]);
+        return App::view('add', ['id' => $id, 'accounts' => self::getData()->showAll()]);
     }   
 
     public function doAdd($id) {
         $id = (int) $id;
-        $account = Json::getJson()->show($id);
+        $account =  self::getData()->show($id);
         $account['amount'] += (float) $_POST['amount'];
-        Json::getJson()->update($id, $account);
+        self::getData()->update($id, $account);
         App::redirect();
     }   
 
     public function remove($id) {
-        return App::view('remove', ['id' => $id]);
+        return App::view('remove', ['id' => $id, 'accounts' => self::getData()->showAll()]);
     }
 
     public function doRemove($id) {
         $id = (int) $id;
-        $account = Json::getJson()->show($id);
+        $account =  self::getData()->show($id);
         if ($account['amount'] > (float) $_POST['amount']) {
             $account['amount'] -= (float) $_POST['amount'];
-            Json::getJson()->update($id, $account);
+            self::getData()->update($id, $account);
         }
         App::redirect();
     }
 
     public function delete($id) {
-        if ($account['amount'] = 0) {
-            Json::getJson()->delete($id);
-        }
+        // if ($account['amount'] = 0) {
+            self::getData()->delete($id);
+        // }
         App::redirect();
     }
 
@@ -60,7 +72,7 @@ class BankController {
             'idCode' => $_POST['idCode'],
             'iban' => $_POST['iban'], 
             'amount' => 0]; // be garantiju unikalumui
-            Json::getJson()->create($account);
+            self::getData()->create($account);
         }
         App::redirect();
     }    

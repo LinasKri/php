@@ -6,7 +6,15 @@
 </div>
 
 <div style="background-color: khaki; padding: 20px;">
+
     Account No.: <?= $id ?><br>
+<?php
+foreach ($accounts as $account){
+    if ($account['id'] == $id) {
+        echo 'Account holder: '. $account['name'].' '.$account['surname'].'<br> Account balance: '. $account['amount'].' €' ;
+    }
+}
+?>
     <form action="<?= URL ?>add/<?= $id ?>" method="post">
         <input type="text" name="amount" value="">
         <button>Add funds</button>
@@ -18,9 +26,3 @@
 
 
 
-
-
-    <!-- Account holder: <?= $name ?> <?= $surname ?> <br>
-    Perssonal ID: <?= $account['idCode'] ?> <br>
-    IBAN: <?= $account['iban'] ?><br>
-    Account balance: <?= $amount ?><br> -->
