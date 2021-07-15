@@ -71,6 +71,9 @@ class App {
             $ac = new BankController;
             return $ac->fundTest($uri[1]);
         }
+
+
+        
         if ($uri[0] === '' && count($uri) === 1) {
             return (new BankController)->index();
         }
